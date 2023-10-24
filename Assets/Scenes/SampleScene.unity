@@ -241,7 +241,10 @@ PrefabInstance:
       value: EvanProvisional
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3382717973047898811, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+    - {fileID: 5811911654566798702, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+    - {fileID: 2838982438013447728, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
