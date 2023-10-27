@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DialogueEditor;
+using System;
 
 public class Dialog : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool isPlayerInRange;
     private Map _playersControl = null;
-    public NPCConversation myConversation;
+    public NPCConversation MyConversation;
 
     private void OnEnable()
     {
@@ -25,7 +26,7 @@ public class Dialog : MonoBehaviour
     {
         _playersControl = new Map();
         _playersControl.Exploracion.Conversar.performed += Conversar;
-        _playersControl.Exploracion.Conversar.canceled += Conversar;
+       
     }
     // Update is called once per frame
     void Update()
@@ -33,21 +34,28 @@ public class Dialog : MonoBehaviour
         
     }
 
-
-
     private void Conversar(InputAction.CallbackContext context) {
-        if (isPlayerInRange) {
-            ConversationManager.Instance.StartConversation(myConversation);
+        if (context.ReadValue<float>() == 1 && isPlayerInRange) {
+            
+            ConversationManager.Instance.StartConversation(MyConversation);
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collision)
     {
-        isPlayerInRange = true;
+        if (collision.gameObject.CompareTag("EvanProvisional")) {
+            isPlayerInRange = true;
+            Debug.Log("Entró al colllider");
+        }
+        
         
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider collision)
     {
-        isPlayerInRange = false;
+        if (collision.gameObject.CompareTag("EvanProvisional"))
+        {
+            isPlayerInRange = false;
+            Debug.Log("Salió del colllider");
+        }
     }
 }

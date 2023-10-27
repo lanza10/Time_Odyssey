@@ -638,6 +638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EvanProvisional
       objectReference: {fileID: 0}
+    - target: {fileID: 5653152992196606564, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_TagString
+      value: EvanProvisional
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -747,7 +751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83.2048, y: -37.3971}
+  m_AnchoredPosition: {x: -83.25, y: -37.5}
   m_SizeDelta: {x: 166.4098, y: 74.7942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077376179
