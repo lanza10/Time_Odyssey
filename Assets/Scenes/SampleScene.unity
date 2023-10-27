@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,18 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2953191319923966337, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
-      propertyPath: _speedH
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2953191319923966337, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
-      propertyPath: _speedV
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2953191319923966337, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
-      propertyPath: _mainCamera
-      value: 
-      objectReference: {fileID: 1014914572}
     - target: {fileID: 5653152992196606564, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_Name
       value: EvanProvisional
@@ -196,11 +184,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
---- !u!20 &1014914572 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2365889527700952921, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
-  m_PrefabInstance: {fileID: 1014914571}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4794949987425157518
 PrefabInstance:
   m_ObjectHideFlags: 0

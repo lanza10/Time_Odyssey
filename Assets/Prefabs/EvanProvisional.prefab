@@ -125,7 +125,7 @@ Transform:
   m_Children:
   - {fileID: 7584613305604670682}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2953191319923966337
 MonoBehaviour:
@@ -140,6 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpforce: 250
+  _mainCamera: {fileID: 2365889527700952921}
+  _speedH: 0.5
+  _speedV: 0.5
 --- !u!54 &1381575238173006714
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -51,6 +51,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Conversar",
+                    "type": "Button",
+                    "id": "7870e660-b3d7-4297-9c56-08a7dcd494a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Coger",
                     "type": "Button",
                     "id": "dd919cce-5b78-440e-9865-351478fa25d4",
@@ -124,6 +133,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Coger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1455e6da-fd09-471c-b0f2-62478e36a56a",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Conversar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

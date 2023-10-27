@@ -73,6 +73,15 @@ public partial class @Map: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Conversar"",
+                    ""type"": ""Button"",
+                    ""id"": ""7870e660-b3d7-4297-9c56-08a7dcd494a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Coger"",
                     ""type"": ""Button"",
                     ""id"": ""dd919cce-5b78-440e-9865-351478fa25d4"",
@@ -148,6 +157,17 @@ public partial class @Map: IInputActionCollection2, IDisposable
                     ""action"": ""Coger"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1455e6da-fd09-471c-b0f2-62478e36a56a"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Conversar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -161,6 +181,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         m_Exploracion_Saltar = m_Exploracion.FindAction("Saltar", throwIfNotFound: true);
         m_Exploracion_Esprintar = m_Exploracion.FindAction("Esprintar", throwIfNotFound: true);
         m_Exploracion_Agacharse = m_Exploracion.FindAction("Agacharse", throwIfNotFound: true);
+        m_Exploracion_Conversar = m_Exploracion.FindAction("Conversar", throwIfNotFound: true);
         m_Exploracion_Coger = m_Exploracion.FindAction("Coger", throwIfNotFound: true);
     }
 
@@ -228,6 +249,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
     private readonly InputAction m_Exploracion_Saltar;
     private readonly InputAction m_Exploracion_Esprintar;
     private readonly InputAction m_Exploracion_Agacharse;
+    private readonly InputAction m_Exploracion_Conversar;
     private readonly InputAction m_Exploracion_Coger;
     public struct ExploracionActions
     {
@@ -238,6 +260,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         public InputAction @Saltar => m_Wrapper.m_Exploracion_Saltar;
         public InputAction @Esprintar => m_Wrapper.m_Exploracion_Esprintar;
         public InputAction @Agacharse => m_Wrapper.m_Exploracion_Agacharse;
+        public InputAction @Conversar => m_Wrapper.m_Exploracion_Conversar;
         public InputAction @Coger => m_Wrapper.m_Exploracion_Coger;
         public InputActionMap Get() { return m_Wrapper.m_Exploracion; }
         public void Enable() { Get().Enable(); }
@@ -263,6 +286,9 @@ public partial class @Map: IInputActionCollection2, IDisposable
             @Agacharse.started += instance.OnAgacharse;
             @Agacharse.performed += instance.OnAgacharse;
             @Agacharse.canceled += instance.OnAgacharse;
+            @Conversar.started += instance.OnConversar;
+            @Conversar.performed += instance.OnConversar;
+            @Conversar.canceled += instance.OnConversar;
             @Coger.started += instance.OnCoger;
             @Coger.performed += instance.OnCoger;
             @Coger.canceled += instance.OnCoger;
@@ -285,6 +311,9 @@ public partial class @Map: IInputActionCollection2, IDisposable
             @Agacharse.started -= instance.OnAgacharse;
             @Agacharse.performed -= instance.OnAgacharse;
             @Agacharse.canceled -= instance.OnAgacharse;
+            @Conversar.started -= instance.OnConversar;
+            @Conversar.performed -= instance.OnConversar;
+            @Conversar.canceled -= instance.OnConversar;
             @Coger.started -= instance.OnCoger;
             @Coger.performed -= instance.OnCoger;
             @Coger.canceled -= instance.OnCoger;
@@ -312,6 +341,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         void OnSaltar(InputAction.CallbackContext context);
         void OnEsprintar(InputAction.CallbackContext context);
         void OnAgacharse(InputAction.CallbackContext context);
+        void OnConversar(InputAction.CallbackContext context);
         void OnCoger(InputAction.CallbackContext context);
     }
 }
