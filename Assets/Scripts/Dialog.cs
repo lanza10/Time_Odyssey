@@ -11,6 +11,7 @@ public class Dialog : MonoBehaviour
     private bool isPlayerInRange;
     private Map _playersControl = null;
     public NPCConversation MyConversation;
+    public ConversationManager convMan;
 
     private void OnEnable()
     {
@@ -31,7 +32,6 @@ public class Dialog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void Conversar(InputAction.CallbackContext context) {
