@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConversationManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: AllowMouseInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1269,7 +1273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d195c4b15aa59a4ba9d98420e71f1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  control: {fileID: 2088654953}
   MyConversation: {fileID: 1987901765}
+  convMan: {fileID: 0}
 --- !u!1 &1987901764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,12 +1306,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":550.2,\"yPos\":257.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED,
-    estoy preparad@.\",\"parentUIDs\":[1],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":279.2,\"yPos\":263.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Los
-    dos sabemos que eso no va a pasar...\",\"parentUIDs\":[1],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":385,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
-    soy un cubo, bienvenido a Time Odyssey.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cubo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":380.2,\"yPos\":129.799988},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mi
-    misi\xF3n es ayudarte a aprobar DV3D. \xBFQuieres intentarlo?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cubo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":310.2,\"yPos\":350.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tienes
-    raz\xF3n bro.\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cubo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":590.2,\"yPos\":430.8},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mucho
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":585.2,\"yPos\":438.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED,
+    estoy preparad@.\",\"parentUIDs\":[1],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":314.2,\"yPos\":444.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Los
+    dos sabemos que eso no va a pasar...\",\"parentUIDs\":[1],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":420,\"yPos\":203},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
+    soy un cubo, bienvenido a Time Odyssey.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cubo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":415.2,\"yPos\":310.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mi
+    misi\xF3n es ayudarte a aprobar DV3D. \xBFQuieres intentarlo?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cubo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":345.2,\"yPos\":531.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tienes
+    raz\xF3n bro.\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cubo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":625.2,\"yPos\":611.8},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mucho
     \xE1nimo! Te deseo lo mejor.\",\"parentUIDs\":[5,3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cubo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -1502,3 +1508,14 @@ MonoBehaviour:
   TMPFont: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
+--- !u!114 &2088654953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2953191319923966337, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+  m_PrefabInstance: {fileID: 844936212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc27551fd7d7a4a42a1fa56fb3ced7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -154,4 +154,12 @@ public class CharacterControl : MonoBehaviour
         CamRight = CamRight.normalized;
     }
 
+    public void DesactivarMap()
+    {
+        _playersControl.Disable();
+    }
+    public void ActivarMap()
+    {
+        _playersControl.Enable();
+    }
 }

@@ -170,6 +170,94 @@ public partial class @Map: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Conversacion"",
+            ""id"": ""09a11dae-16c8-429c-a286-92883f0276e0"",
+            ""actions"": [
+                {
+                    ""name"": ""Siguiente"",
+                    ""type"": ""Button"",
+                    ""id"": ""c1bfe0ac-f817-4ad4-9d56-11cfdd45df74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Anterior"",
+                    ""type"": ""Button"",
+                    ""id"": ""73e6624f-0547-4d36-906d-620e7c0f2347"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirmar"",
+                    ""type"": ""Button"",
+                    ""id"": ""1e2abf13-ed59-4e5f-bfdc-93cd1ac9862c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Opcion"",
+                    ""type"": ""Button"",
+                    ""id"": ""b10d01f9-e472-46f4-a3f0-1fd38dd58d5b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""906a8401-7be6-4f72-ac96-ca3083aa58a7"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Siguiente"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c00ae13-e89e-41fa-a5c6-fe7f08d5e691"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Anterior"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b1f1ffd9-4e11-4b1e-b035-8dd12046bf16"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirmar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3d42cc7-9f2e-4b18-ae95-4fdcdcbce286"",
+                    ""path"": ""<Gamepad>/leftStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Opcion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -183,6 +271,12 @@ public partial class @Map: IInputActionCollection2, IDisposable
         m_Exploracion_Agacharse = m_Exploracion.FindAction("Agacharse", throwIfNotFound: true);
         m_Exploracion_Conversar = m_Exploracion.FindAction("Conversar", throwIfNotFound: true);
         m_Exploracion_Coger = m_Exploracion.FindAction("Coger", throwIfNotFound: true);
+        // Conversacion
+        m_Conversacion = asset.FindActionMap("Conversacion", throwIfNotFound: true);
+        m_Conversacion_Siguiente = m_Conversacion.FindAction("Siguiente", throwIfNotFound: true);
+        m_Conversacion_Anterior = m_Conversacion.FindAction("Anterior", throwIfNotFound: true);
+        m_Conversacion_Confirmar = m_Conversacion.FindAction("Confirmar", throwIfNotFound: true);
+        m_Conversacion_Opcion = m_Conversacion.FindAction("Opcion", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -334,6 +428,76 @@ public partial class @Map: IInputActionCollection2, IDisposable
         }
     }
     public ExploracionActions @Exploracion => new ExploracionActions(this);
+
+    // Conversacion
+    private readonly InputActionMap m_Conversacion;
+    private List<IConversacionActions> m_ConversacionActionsCallbackInterfaces = new List<IConversacionActions>();
+    private readonly InputAction m_Conversacion_Siguiente;
+    private readonly InputAction m_Conversacion_Anterior;
+    private readonly InputAction m_Conversacion_Confirmar;
+    private readonly InputAction m_Conversacion_Opcion;
+    public struct ConversacionActions
+    {
+        private @Map m_Wrapper;
+        public ConversacionActions(@Map wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Siguiente => m_Wrapper.m_Conversacion_Siguiente;
+        public InputAction @Anterior => m_Wrapper.m_Conversacion_Anterior;
+        public InputAction @Confirmar => m_Wrapper.m_Conversacion_Confirmar;
+        public InputAction @Opcion => m_Wrapper.m_Conversacion_Opcion;
+        public InputActionMap Get() { return m_Wrapper.m_Conversacion; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ConversacionActions set) { return set.Get(); }
+        public void AddCallbacks(IConversacionActions instance)
+        {
+            if (instance == null || m_Wrapper.m_ConversacionActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ConversacionActionsCallbackInterfaces.Add(instance);
+            @Siguiente.started += instance.OnSiguiente;
+            @Siguiente.performed += instance.OnSiguiente;
+            @Siguiente.canceled += instance.OnSiguiente;
+            @Anterior.started += instance.OnAnterior;
+            @Anterior.performed += instance.OnAnterior;
+            @Anterior.canceled += instance.OnAnterior;
+            @Confirmar.started += instance.OnConfirmar;
+            @Confirmar.performed += instance.OnConfirmar;
+            @Confirmar.canceled += instance.OnConfirmar;
+            @Opcion.started += instance.OnOpcion;
+            @Opcion.performed += instance.OnOpcion;
+            @Opcion.canceled += instance.OnOpcion;
+        }
+
+        private void UnregisterCallbacks(IConversacionActions instance)
+        {
+            @Siguiente.started -= instance.OnSiguiente;
+            @Siguiente.performed -= instance.OnSiguiente;
+            @Siguiente.canceled -= instance.OnSiguiente;
+            @Anterior.started -= instance.OnAnterior;
+            @Anterior.performed -= instance.OnAnterior;
+            @Anterior.canceled -= instance.OnAnterior;
+            @Confirmar.started -= instance.OnConfirmar;
+            @Confirmar.performed -= instance.OnConfirmar;
+            @Confirmar.canceled -= instance.OnConfirmar;
+            @Opcion.started -= instance.OnOpcion;
+            @Opcion.performed -= instance.OnOpcion;
+            @Opcion.canceled -= instance.OnOpcion;
+        }
+
+        public void RemoveCallbacks(IConversacionActions instance)
+        {
+            if (m_Wrapper.m_ConversacionActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IConversacionActions instance)
+        {
+            foreach (var item in m_Wrapper.m_ConversacionActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_ConversacionActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public ConversacionActions @Conversacion => new ConversacionActions(this);
     public interface IExploracionActions
     {
         void OnMovimiento(InputAction.CallbackContext context);
@@ -343,5 +507,12 @@ public partial class @Map: IInputActionCollection2, IDisposable
         void OnAgacharse(InputAction.CallbackContext context);
         void OnConversar(InputAction.CallbackContext context);
         void OnCoger(InputAction.CallbackContext context);
+    }
+    public interface IConversacionActions
+    {
+        void OnSiguiente(InputAction.CallbackContext context);
+        void OnAnterior(InputAction.CallbackContext context);
+        void OnConfirmar(InputAction.CallbackContext context);
+        void OnOpcion(InputAction.CallbackContext context);
     }
 }
