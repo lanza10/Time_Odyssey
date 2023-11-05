@@ -148,6 +148,94 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Conversacion",
+            "id": "09a11dae-16c8-429c-a286-92883f0276e0",
+            "actions": [
+                {
+                    "name": "Siguiente",
+                    "type": "Button",
+                    "id": "c1bfe0ac-f817-4ad4-9d56-11cfdd45df74",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Anterior",
+                    "type": "Button",
+                    "id": "73e6624f-0547-4d36-906d-620e7c0f2347",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Confirmar",
+                    "type": "Button",
+                    "id": "1e2abf13-ed59-4e5f-bfdc-93cd1ac9862c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Opcion",
+                    "type": "Button",
+                    "id": "b10d01f9-e472-46f4-a3f0-1fd38dd58d5b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "906a8401-7be6-4f72-ac96-ca3083aa58a7",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Siguiente",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c00ae13-e89e-41fa-a5c6-fe7f08d5e691",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Anterior",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1f1ffd9-4e11-4b1e-b035-8dd12046bf16",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirmar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3d42cc7-9f2e-4b18-ae95-4fdcdcbce286",
+                    "path": "<Gamepad>/leftStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Opcion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
