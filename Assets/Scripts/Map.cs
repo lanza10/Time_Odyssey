@@ -161,7 +161,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1455e6da-fd09-471c-b0f2-62478e36a56a"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
