@@ -141,8 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jumpforce: 250
   _mainCamera: {fileID: 2365889527700952921}
-  _speedH: 0.5
-  _speedV: 0.5
+  _speedH: 4
+  _speedV: 4
+  objetos: []
 --- !u!54 &1381575238173006714
 Rigidbody:
   m_ObjectHideFlags: 0
