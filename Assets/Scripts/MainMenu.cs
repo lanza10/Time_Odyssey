@@ -21,4 +21,13 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene("TrainScene");
     }
+    public void cargarCreditos()
+    {
+
+        SceneManager.LoadScene("Creditos");
+    }
+    public void Salir()
+    {
+        Application.Quit();
+    }
 }
