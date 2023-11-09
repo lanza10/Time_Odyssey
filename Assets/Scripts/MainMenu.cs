@@ -16,7 +16,11 @@ public class MainMenu : MonoBehaviour
     {
         
     }
+    public void cargarMainMenu()
+    {
 
+        SceneManager.LoadScene("MainMenu");
+    }
     public void cargarEscenaJuego() {
 
         SceneManager.LoadScene("TrainScene");

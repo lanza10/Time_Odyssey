@@ -22,7 +22,7 @@ public class TemporizadorMenu : MonoBehaviour
         else
         {
             currentTime = 0;
-            SceneManager.LoadScene("TrainScene");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 

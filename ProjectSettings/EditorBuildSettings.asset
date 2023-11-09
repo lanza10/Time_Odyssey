@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: ac4ce372f2a862e4c83ae0033df91850
+  - enabled: 1
+    path: Assets/Scenes/Splash.unity
+    guid: d4a90dd878804a541ace272ed329a7e6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a6c6d3219baba2640bef915bc9b83164, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f9899b3f4af815c47901d8fafffd7e77, type: 2}
