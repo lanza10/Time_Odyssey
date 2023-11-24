@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 2953191319923966337}
   - component: {fileID: 1381575238173006714}
   - component: {fileID: 284939636438617888}
+  - component: {fileID: 3804960784482051898}
   m_Layer: 0
   m_Name: EvanProvisional
   m_TagString: EvanProvisional
@@ -139,11 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27551fd7d7a4a42a1fa56fb3ced7e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventario: {fileID: 3804960784482051898}
   _jumpforce: 250
   _mainCamera: {fileID: 2365889527700952921}
   _speedH: 4
   _speedV: 4
-  objetos: []
 --- !u!54 &1381575238173006714
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -192,3 +193,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3804960784482051898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653152992196606564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a4b01e0b8eecb46bf7c88628fb0295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetos: []
