@@ -10,7 +10,6 @@ public class ObjectController : MonoBehaviour
 {
     private bool isPlayerInRange;
     public CharacterControl player;
-    protected bool isTaken = false;
     private Map _playersControl = null;
     public Material materialAccionable;
     public Material materialObjeto;
@@ -32,11 +31,8 @@ public class ObjectController : MonoBehaviour
     {
         if (context.ReadValue<float>() == 1 && isPlayerInRange)
         {
-            Debug.Log(player.tieneObjeto[this.gameObject.name]);
-            isTaken = true;
-            player.tieneObjeto[this.gameObject.name] = true;
-            Destroy(this.gameObject);
-            Debug.Log(player.tieneObjeto[this.gameObject.name]);
+            player.addObjeto(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 

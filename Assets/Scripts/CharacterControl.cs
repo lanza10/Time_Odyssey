@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class CharacterControl : MonoBehaviour
 {
     private Map _playersControl = null;
-
+    public Inventario inventario;
     private float _walkSpeed = 5f;
     private float _sprintingSpeed = 8f;
 
@@ -28,9 +28,6 @@ public class CharacterControl : MonoBehaviour
     private Vector3 CamForward;
     private Vector3 CamRight;
 
-    public Hashtable tieneObjeto = new Hashtable();
-    public GameObject[] objetos;
-
 
     private void OnEnable()
     {
@@ -44,11 +41,6 @@ public class CharacterControl : MonoBehaviour
 
     private void Awake()
     {
-        objetos = GameObject.FindGameObjectsWithTag("Objeto");
-        foreach(GameObject o in objetos)
-        {
-            tieneObjeto.Add(o.name, false);
-        }
         _rigibody = GetComponent<Rigidbody>();
 
         _playersControl = new Map();
@@ -91,6 +83,10 @@ public class CharacterControl : MonoBehaviour
     private void Update()
     {
         MoveCamera();
+    }
+    public void addObjeto(GameObject o)
+    {
+        inventario.objetos.Add( o );
     }
 
     public void Move()
