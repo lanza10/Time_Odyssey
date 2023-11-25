@@ -4507,17 +4507,6 @@ Transform:
   m_Father: {fileID: 1173310167}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &705688079 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6124535973847050003, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
-  m_PrefabInstance: {fileID: 1262105961}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d195c4b15aa59a4ba9d98420e71f1ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &736947099
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,15 +5488,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.79
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.04
+      value: 1.015
       objectReference: {fileID: 0}
     - target: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.93
+      value: 22.238
       objectReference: {fileID: 0}
     - target: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6552,18 +6541,6 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6205621463511294127, guid: c5ed37593c5e78f4994aa6d48f3de5d8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205621463511294127, guid: c5ed37593c5e78f4994aa6d48f3de5d8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205621463511294127, guid: c5ed37593c5e78f4994aa6d48f3de5d8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205621463511294127, guid: c5ed37593c5e78f4994aa6d48f3de5d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8700001
       objectReference: {fileID: 0}
@@ -6605,7 +6582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6267738056299206262, guid: c5ed37593c5e78f4994aa6d48f3de5d8, type: 3}
       propertyPath: m_Name
-      value: "Conversaci\xF3nAlexInicial"
+      value: ConversacionAlexInicial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7054,6 +7031,7 @@ MonoBehaviour:
   control: {fileID: 2088654953}
   MyConversation: {fileID: 1987901765}
   convMan: {fileID: 0}
+  conversacionAlexEnd: 0
 --- !u!1 &1077830080
 GameObject:
   m_ObjectHideFlags: 0
@@ -8268,7 +8246,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2176201be9c23ed4d852f6b544db2bc2, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6124535973847050003, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6102914514881887682, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
@@ -8277,7 +8256,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6102914514881887682, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2037389664}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2067452701417848957, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1843854984}
   m_SourcePrefab: {fileID: 100100000, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
 --- !u!1 &1297094833
 GameObject:
@@ -9720,11 +9702,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 5
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":148.2,\"yPos\":179.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Claro,
-    aqu\xED lo tiene\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":405.2,\"yPos\":174.8},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ohh
-    nooo, no lo llevo encima...lo habr\xE9 perdido\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":234.400024,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
-    tardes, se\xF1or. \xBFPuedo ver su billete, por favor?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":405.2,\"yPos\":261.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tranquilo,
-    lo tengo yo, se te ha ca\xEDdo mientras dormias.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":260.2,\"yPos\":417.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Gracias,
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":258.3,\"yPos\":179.799988},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Claro,
+    aqu\xED lo tiene\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":515.3,\"yPos\":174.799988},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ohh
+    nooo, no lo llevo encima...lo habr\xE9 perdido\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":344.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
+    tardes, se\xF1or. \xBFPuedo ver su billete, por favor?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":515.3,\"yPos\":261.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tranquilo,
+    lo tengo yo, se te ha ca\xEDdo mientras dormias.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":370.3,\"yPos\":417.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Gracias,
     se\xF1or. Todo parece estar en orden. Disfrute de su viaje.\",\"parentUIDs\":[3,1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -11127,6 +11109,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837002949}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1843854979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2067452701417848957, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
+  m_PrefabInstance: {fileID: 1262105961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1843854984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843854979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd771db92a290e46aa33c56cff55ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 2088654953}
+  MyConversation: {fileID: 1384475539}
+  convMan: {fileID: 0}
 --- !u!1 &1879936492
 GameObject:
   m_ObjectHideFlags: 0
@@ -11291,8 +11293,8 @@ GameObject:
   - component: {fileID: 1949931606}
   - component: {fileID: 1949931605}
   - component: {fileID: 1949931604}
-  - component: {fileID: 1949931608}
   - component: {fileID: 1949931609}
+  - component: {fileID: 1949931610}
   m_Layer: 0
   m_Name: RevisorProvisional
   m_TagString: Untagged
@@ -11381,7 +11383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949931603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.79, y: 0.67, z: 12.63}
+  m_LocalPosition: {x: 7.8, y: 0.658, z: 12.633}
   m_LocalScale: {x: 0.57799, y: 0.75073, z: 0.5916}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11391,21 +11393,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1949931608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949931603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d195c4b15aa59a4ba9d98420e71f1ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 2088654953}
-  MyConversation: {fileID: 1588078662}
-  convMan: {fileID: 0}
 --- !u!114 &1949931609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11418,7 +11405,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57aca15a4a576064d92b7a9f28dca920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogoAnterior: {fileID: 705688079}
+  dialogoAnterior: {fileID: 1843854984}
+  dialogActual: {fileID: 1949931610}
+  evan: {fileID: 2088654954}
+--- !u!114 &1949931610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949931603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd771db92a290e46aa33c56cff55ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 2088654953}
+  MyConversation: {fileID: 1588078662}
+  convMan: {fileID: 0}
 --- !u!1 &1964896815
 GameObject:
   m_ObjectHideFlags: 0
@@ -12529,6 +12533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27551fd7d7a4a42a1fa56fb3ced7e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2088654954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+  m_PrefabInstance: {fileID: 844936212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2123464135
 GameObject:
   m_ObjectHideFlags: 0

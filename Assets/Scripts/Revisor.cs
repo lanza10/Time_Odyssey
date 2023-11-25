@@ -5,17 +5,26 @@ using UnityEngine;
 
 public class Revisor : MonoBehaviour
 {
-    public Dialog dialogoAnterior;
+    public DialogInit dialogoAnterior;
+    public DialogInit dialogActual;
     enum ESTADOS {QUIETO, CAMINANDO, REVISANDO, ALTERADO  }
     //Stack<ESTADOS> SSstate = new Stack<ESTADOS>();
-    private Transform destino;
-    private float velocidad = 2;
-
+    public Transform evan;
+    private float velocidad = 2f;
+    private bool semaforo;
+    private Vector3 posInit;
+    enum CONV { NOINICIADA, INICIADA, ACABADA}
+    private CONV _conv;
+    CONV conv
+    {
+        get { return _conv; }
+        set { _conv = value;}
+    }
     private ESTADOS _estado;
     ESTADOS estado // property
     {
         get { return _estado; }
-        set { _estado = value; }
+        set { _estado = value; semaforo = true; }
     }
 
     
@@ -24,7 +33,9 @@ public class Revisor : MonoBehaviour
     {
         //Inicializando el estado de arranque del personaje
         estado = ESTADOS.QUIETO;
+        conv = CONV.NOINICIADA;
         Debug.Log("HOLAAAAAAAAAAAA");
+        posInit= transform.position;
         //SSstate.Clear();
     }
 
@@ -40,36 +51,74 @@ public class Revisor : MonoBehaviour
         {
             case ESTADOS.QUIETO:
                 if (dialogoAnterior.getConversacionAlexEnd()) {
-                    desplazamiento();
+                    
                     estado = ESTADOS.CAMINANDO;
                 }
                 break;
             case ESTADOS.CAMINANDO:
+                if(semaforo) {
+                    if (!dialogActual.getConversacionRevEnd())
+                    {
+                        desplazamientoHaciaEvan();
+                    }
+                    else
+                    {
+                        desplazamientoHaciaInicio();
+                    }
+                }else
+                {
+                    estado = ESTADOS.REVISANDO;
+                }
                 //Debug.Log("Estoy Caminando");
                 break;
-           /*ase ESTADOS.REVISANDO:
-              
+           case ESTADOS.REVISANDO:
+                switch (conv)
+                {
+                    case CONV.NOINICIADA:
+                        dialogActual.Conversar();
+                        conv = CONV.INICIADA;
+                        break;
+                    case CONV.INICIADA:
+                        if (dialogActual.getConversacionRevEnd())
+                        {
+                            conv= CONV.ACABADA;
+                        }
+                        break;
+                    case CONV.ACABADA:
+                        
+                        estado = ESTADOS.CAMINANDO;
+                        break;
+                }
+                    
                 break;
             case ESTADOS.ALTERADO:
                 
-                break;*/
+                break;
         }
     }
 
-   void desplazamiento() {
-        Vector3 direccion = (dialogoAnterior.control.transform.position - transform.position).normalized;
-        destino = dialogoAnterior.control.transform;
-        Vector3 nuevaPosicion = new Vector3(destino.position.x + 1.5f, transform.position.y, destino.position.z + 1.5f);
-        // Calcula la distancia entre el objeto y el destino
-        //float distancia = Vector3.Distance(transform.position, destino.position);
-        transform.position = Vector3.MoveTowards(transform.position, nuevaPosicion, velocidad * Time.deltaTime);
-
-        // Si la distancia es mayor que 0.1, mueve el objeto hacia el destino
-        /*
-        if (distancia > 0.1f)
+   void desplazamientoHaciaEvan() {
+        Debug.Log('C');
+        Vector3 miVector = new Vector3(1f, 0f, 0f);
+        Vector3 direccion = (evan.position + miVector ) - transform.position;
+        direccion.Normalize();
+        transform.Translate(direccion * velocidad * Time.deltaTime);
+        if (transform.position == evan.position + miVector)
         {
-            // Utiliza transform.Translate para mover el objeto en la dirección calculada
-            transform.Translate(direccion * velocidad * Time.deltaTime, Space.World);
-        }*/
+            semaforo = false;
+        }
     }
+    void desplazamientoHaciaInicio()
+    {
+        Debug.Log('B');
+        Vector3 direccion = posInit - transform.position;
+        direccion.Normalize();
+        transform.Translate(direccion * velocidad * Time.deltaTime);
+        if (transform.position == posInit)
+        {
+            semaforo = false;
+        }
+    }
+
+
 }
