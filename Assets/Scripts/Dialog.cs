@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DialogueEditor;
 using System;
+using Unity.VisualScripting;
 
 public class Dialog : MonoBehaviour
 {
@@ -13,12 +14,14 @@ public class Dialog : MonoBehaviour
     private Map _playersControl = null;
     public NPCConversation MyConversation;
     public ConversationManager convMan;
+    private bool conversacionAlexEnd = false;
 
     private void OnEnable()
     {
         _playersControl.Enable();
         ConversationManager.OnConversationStarted += ConversationStart;
         ConversationManager.OnConversationEnded += ConversationEnd;
+
     }
 
     private void OnDisable()
@@ -35,8 +38,7 @@ public class Dialog : MonoBehaviour
         _playersControl.Conversacion.Confirmar.performed += Confirmar;
         _playersControl.Conversacion.Siguiente.performed += Siguiente;
         _playersControl.Conversacion.Anterior.performed += Anterior;
-        _playersControl.Conversacion.Opcion.performed += CambiaOpcion;
-       
+        _playersControl.Conversacion.Opcion.performed += CambiaOpcion;      
 
     }
     // Update is called once per frame
@@ -110,7 +112,18 @@ public class Dialog : MonoBehaviour
 
     private void ConversationEnd()
     {
+        if (this.gameObject.name == "AlexProvisional")
+        {
+            conversacionAlexEnd = true;
+        }
         control.ActivarMap();
     }
+
+    public bool getConversacionAlexEnd()
+    {
+        return conversacionAlexEnd;
+    }
+
+    
 
 }
