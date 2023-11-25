@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Revisor : MonoBehaviour
 {
-    public DialogInit dialogoAnterior;
-    public DialogInit dialogActual;
+    public DialogInit dialogo;
     enum ESTADOS {QUIETO, CAMINANDO, REVISANDO, ALTERADO  }
     //Stack<ESTADOS> SSstate = new Stack<ESTADOS>();
     public Transform evan;
@@ -50,14 +49,14 @@ public class Revisor : MonoBehaviour
         switch (estado)
         {
             case ESTADOS.QUIETO:
-                if (dialogoAnterior.getConversacionAlexEnd()) {
+                if (dialogo.getConversacionAlexEnd()) {
                     
                     estado = ESTADOS.CAMINANDO;
                 }
                 break;
             case ESTADOS.CAMINANDO:
                 if(semaforo) {
-                    if (!dialogActual.getConversacionRevEnd())
+                    if (!dialogo.getConversacionRevEnd())
                     {
                         desplazamientoHaciaEvan();
                     }
@@ -75,17 +74,16 @@ public class Revisor : MonoBehaviour
                 switch (conv)
                 {
                     case CONV.NOINICIADA:
-                        dialogActual.Conversar();
+                        dialogo.Conversar();
                         conv = CONV.INICIADA;
                         break;
                     case CONV.INICIADA:
-                        if (dialogActual.getConversacionRevEnd())
+                        if (dialogo.getConversacionRevEnd())
                         {
-                            conv= CONV.ACABADA;
+                            conv = CONV.ACABADA;
                         }
                         break;
                     case CONV.ACABADA:
-                        
                         estado = ESTADOS.CAMINANDO;
                         break;
                 }
@@ -98,7 +96,6 @@ public class Revisor : MonoBehaviour
     }
 
    void desplazamientoHaciaEvan() {
-        Debug.Log('C');
         Vector3 miVector = new Vector3(1f, 0f, 0f);
         Vector3 direccion = (evan.position + miVector ) - transform.position;
         direccion.Normalize();
@@ -110,7 +107,6 @@ public class Revisor : MonoBehaviour
     }
     void desplazamientoHaciaInicio()
     {
-        Debug.Log('B');
         Vector3 direccion = posInit - transform.position;
         direccion.Normalize();
         transform.Translate(direccion * velocidad * Time.deltaTime);

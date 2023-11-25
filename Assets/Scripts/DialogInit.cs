@@ -11,47 +11,31 @@ public class DialogInit : MonoBehaviour
     // Start is called before the first frame update
     public CharacterControl control;
     private Map _playersControl = null;
-    public NPCConversation MyConversation;
+    public NPCConversation[] MyConversations;
+    public NPCConversation actualConversation;
     public ConversationManager convMan;
     private bool conversacionAlexEnd = false;
     private bool conversacionRevEnd = false;
     public bool esRevisor;
+    private GameObject objeto;
 
     private void OnEnable()
     {
         _playersControl.Enable();
-        if(!esRevisor)
-        {
-            ConversationManager.OnConversationStarted += ConversationAlexStart;
-            ConversationManager.OnConversationEnded += ConversationAlexEnd;
-        }
-        else
-        {
-            ConversationManager.OnConversationStarted += ConversationRevStart;
-            ConversationManager.OnConversationEnded += ConversationRevEnd;
-        }
-
-
-
+            ConversationManager.OnConversationStarted += ConversationStart;
+            ConversationManager.OnConversationEnded += ConversationEnd;
     }
 
     private void OnDisable()
     {
         _playersControl.Disable();
-        if (!esRevisor)
-        {
-            ConversationManager.OnConversationStarted -= ConversationAlexStart;
-            ConversationManager.OnConversationEnded -= ConversationAlexEnd;
-        }
-        else
-        {
-            ConversationManager.OnConversationStarted -= ConversationRevStart;
-            ConversationManager.OnConversationEnded -= ConversationRevEnd;
-        }
+            ConversationManager.OnConversationStarted -= ConversationStart;
+            ConversationManager.OnConversationEnded -= ConversationEnd;
     }
 
     private void Awake()
     {
+       
         esRevisor = this.gameObject.name == "RevisorProvisional";
         _playersControl = new Map();
         _playersControl.Conversacion.Confirmar.performed += Confirmar;
@@ -65,6 +49,22 @@ public class DialogInit : MonoBehaviour
 
     void Update()
     {
+        if(objeto == GameObject.FindGameObjectWithTag("Alex"))
+        {
+            esRevisor = false;
+            actualConversation = MyConversations[0];
+        }
+        else
+        {
+            esRevisor = true;
+            actualConversation = MyConversations[1];
+        }
+    }
+    private void Start()
+    {
+        objeto = GameObject.FindGameObjectWithTag("Alex");
+        actualConversation = MyConversations[0];
+        Conversar();
     }
     private void Confirmar(InputAction.CallbackContext context)
     {
@@ -103,8 +103,7 @@ public class DialogInit : MonoBehaviour
     }
     public void Conversar()
     {
-       Debug.Log('A');
-       ConversationManager.Instance.StartConversation(MyConversation);
+       ConversationManager.Instance.StartConversation(actualConversation);
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -130,33 +129,26 @@ public class DialogInit : MonoBehaviour
         }
     }
 
-    private void ConversationAlexStart()
+    private void ConversationStart()
     {
         control.DesactivarMap();
     }
 
-   
-    private void ConversationRevStart()
-    {
-        control.DesactivarMap();
-    }
-    private void ConversationAlexEnd()
+ 
+    private void ConversationEnd()
     {
         if (!esRevisor)
         {
             conversacionAlexEnd = true;
             control.ActivarMap();
-        }
-    }
-
-    private void ConversationRevEnd()
-    {
-        if (esRevisor)
+            objeto = GameObject.FindGameObjectWithTag("Revisor");
+        }else
         {
             conversacionRevEnd = true;
             control.ActivarMap();
         }
     }
+
 
 
     public bool getConversacionAlexEnd()

@@ -790,6 +790,57 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &137607641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 137607643}
+  - component: {fileID: 137607642}
+  m_Layer: 0
+  m_Name: DIalogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &137607642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137607641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd771db92a290e46aa33c56cff55ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 2088654953}
+  MyConversations:
+  - {fileID: 1384475539}
+  - {fileID: 1588078662}
+  actualConversation: {fileID: 0}
+  convMan: {fileID: 0}
+  esRevisor: 0
+--- !u!4 &137607643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137607641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.760555, y: 1.5477905, z: 12.750798}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &151731758
 Transform:
   m_ObjectHideFlags: 0
@@ -6875,7 +6926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -88.882904, y: -45}
+  m_AnchoredPosition: {x: -89, y: -32}
   m_SizeDelta: {x: 129.1756, y: 51.8729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077376179
@@ -8190,6 +8241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlexProvisional
       objectReference: {fileID: 0}
+    - target: {fileID: 2067452701417848957, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
+      propertyPath: m_TagString
+      value: Alex
+      objectReference: {fileID: 0}
     - target: {fileID: 6102914514881887682, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -8256,10 +8311,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6102914514881887682, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2037389664}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2067452701417848957, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1843854984}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
 --- !u!1 &1297094833
 GameObject:
@@ -11109,26 +11161,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837002949}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1843854979 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2067452701417848957, guid: 3cc539949deadfa4f8dcfb6a6ae69b62, type: 3}
-  m_PrefabInstance: {fileID: 1262105961}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1843854984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843854979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd771db92a290e46aa33c56cff55ecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 2088654953}
-  MyConversation: {fileID: 1384475539}
-  convMan: {fileID: 0}
 --- !u!1 &1879936492
 GameObject:
   m_ObjectHideFlags: 0
@@ -11294,10 +11326,9 @@ GameObject:
   - component: {fileID: 1949931605}
   - component: {fileID: 1949931604}
   - component: {fileID: 1949931609}
-  - component: {fileID: 1949931610}
   m_Layer: 0
   m_Name: RevisorProvisional
-  m_TagString: Untagged
+  m_TagString: Revisor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11405,24 +11436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57aca15a4a576064d92b7a9f28dca920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogoAnterior: {fileID: 1843854984}
-  dialogActual: {fileID: 1949931610}
+  dialogo: {fileID: 137607642}
   evan: {fileID: 2088654954}
---- !u!114 &1949931610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949931603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd771db92a290e46aa33c56cff55ecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 2088654953}
-  MyConversation: {fileID: 1588078662}
-  convMan: {fileID: 0}
 --- !u!1 &1964896815
 GameObject:
   m_ObjectHideFlags: 0
