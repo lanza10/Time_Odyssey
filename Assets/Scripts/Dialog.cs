@@ -15,6 +15,8 @@ public class Dialog : MonoBehaviour
     public NPCConversation MyConversation;
     public ConversationManager convMan;
     public bool conversacionAlexEnd = false;
+    public GameObject imagenAviso;
+
 
     private void OnEnable()
     {
@@ -90,6 +92,7 @@ public class Dialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EvanProvisional")) {
             isPlayerInRange = true;
+            imagenAviso.SetActive(true);
             Debug.Log("Entró al colllider");
         }
         
@@ -101,6 +104,7 @@ public class Dialog : MonoBehaviour
         if (collision.gameObject.CompareTag("EvanProvisional"))
         {
             isPlayerInRange = false;
+            imagenAviso.SetActive(false);
             Debug.Log("Salió del colllider");
         }
     }

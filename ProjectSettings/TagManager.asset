@@ -8,6 +8,7 @@ TagManager:
   - Objeto
   - Alex
   - Revisor
+  - Conversacion
   layers:
   - Default
   - TransparentFX

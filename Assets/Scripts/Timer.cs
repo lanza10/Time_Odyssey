@@ -8,11 +8,13 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour 
 { 
     public Text textoTimer;
-    private float totalTime = 1* 60; // 8 minutos en segundos
+    public int minutos;
+    private float totalTime; 
     private float currentTime;
 
     void Start()
     {
+        totalTime = minutos * 60;
         currentTime = totalTime;
     }
 
@@ -24,10 +26,18 @@ public class Timer : MonoBehaviour
             DisplayTime(currentTime);
         }
         else
-        {
-            currentTime = 0;
-            DisplayTime(currentTime);
-            SceneManager.LoadScene("TrainSceneBucle");
+        {   if (this.gameObject.name == "TimerManagerTutorial")
+            {
+                currentTime = 0;
+                DisplayTime(currentTime);
+                SceneManager.LoadScene("TrainSceneBucle");
+            }
+            else {
+                currentTime = 0;
+                DisplayTime(currentTime);
+                SceneManager.LoadScene("GameOver");
+            }
+            
         }
     }
 

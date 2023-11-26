@@ -1472,7 +1472,7 @@ GameObject:
   - component: {fileID: 237543914}
   - component: {fileID: 237543913}
   m_Layer: 0
-  m_Name: TimerManager
+  m_Name: TimerManagerTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1491,6 +1491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoTimer: {fileID: 375206963}
+  minutos: 1
 --- !u!4 &237543914
 Transform:
   m_ObjectHideFlags: 0
@@ -11327,7 +11328,7 @@ GameObject:
   - component: {fileID: 1949931604}
   - component: {fileID: 1949931609}
   m_Layer: 0
-  m_Name: RevisorProvisional
+  m_Name: RevisorProvisionalTutorial
   m_TagString: Revisor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
