@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class CharacterControl : MonoBehaviour
 {
     private Map _playersControl = null;
+    private MapSoloCamara _onlyCamControl= null;
     public Inventario inventario;
     private float _walkSpeed = 5f;
     private float _sprintingSpeed = 8f;
@@ -31,12 +32,12 @@ public class CharacterControl : MonoBehaviour
 
     private void OnEnable()
     {
-        _playersControl.Enable();
+        
     }
 
     private void OnDisable()
     {
-        _playersControl.Disable(); 
+        
     }
 
     private void Awake()
@@ -44,6 +45,7 @@ public class CharacterControl : MonoBehaviour
         _rigibody = GetComponent<Rigidbody>();
 
         _playersControl = new Map();
+        _onlyCamControl = new MapSoloCamara();
         _playersControl.Exploracion.Movimiento.performed += ReadInput;
         _playersControl.Exploracion.Movimiento.canceled += ReadInput;
 
@@ -55,6 +57,8 @@ public class CharacterControl : MonoBehaviour
         _playersControl.Exploracion.Camara.performed += ReadCameraInput;
         _playersControl.Exploracion.Camara.canceled += ReadCameraInput;
 
+        _onlyCamControl.Camara.Camara.performed+= ReadCameraInput;
+        _onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
     }
 
     public void ReadInput(InputAction.CallbackContext context)
@@ -163,6 +167,14 @@ public class CharacterControl : MonoBehaviour
     public void ActivarMap()
     {
         _playersControl.Enable();
+    }
+    public void DesactivarMapSoloCamara()
+    {
+        _onlyCamControl.Disable();
+    }
+    public void ActivarMapSoloCamara()
+    {
+        _onlyCamControl.Enable();
     }
 
 

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using DialogueEditor;
 using System;
 using Unity.VisualScripting;
+using System.Runtime.ConstrainedExecution;
 
 public class DialogInit : MonoBehaviour
 {
@@ -18,6 +19,13 @@ public class DialogInit : MonoBehaviour
     private bool conversacionRevEnd = false;
     public bool esRevisor;
     private GameObject objeto;
+    public GameObject imagenAviso;
+    private bool isPlayerInRange;
+    private bool haIdoPuerta;
+    private const int CONVERSACIONALEX = 0;
+    private const int CONVERSACIONREVISOR1 = 1;
+    private const  int CONVERSACIONPUERTA = 2;
+    private const int CONVERSACIONREVISOR2 = 3;
 
     private void OnEnable()
     {
@@ -38,26 +46,37 @@ public class DialogInit : MonoBehaviour
        
         esRevisor = this.gameObject.name == "RevisorProvisional";
         _playersControl = new Map();
+        _playersControl.Exploracion.Conversar.performed += ConversarA;
         _playersControl.Conversacion.Confirmar.performed += Confirmar;
         _playersControl.Conversacion.Siguiente.performed += Siguiente;
         _playersControl.Conversacion.Anterior.performed += Anterior;
         _playersControl.Conversacion.Opcion.performed += CambiaOpcion;
 
     }
-    // Update is called once per frame
-
 
     void Update()
     {
         if(objeto == GameObject.FindGameObjectWithTag("Alex"))
         {
             esRevisor = false;
-            actualConversation = MyConversations[0];
+            actualConversation = MyConversations[CONVERSACIONALEX];
         }
         else
         {
             esRevisor = true;
-            actualConversation = MyConversations[1];
+            if (!conversacionRevEnd)
+            {
+                actualConversation = MyConversations[CONVERSACIONREVISOR1];
+            }
+            else if (conversacionRevEnd && !haIdoPuerta)
+            {
+                actualConversation = MyConversations[CONVERSACIONPUERTA];
+            }
+            else if(conversacionRevEnd && haIdoPuerta)
+            {
+                actualConversation = MyConversations[CONVERSACIONREVISOR2];
+            }
+            
         }
     }
     private void Start()
@@ -105,51 +124,47 @@ public class DialogInit : MonoBehaviour
     {
        ConversationManager.Instance.StartConversation(actualConversation);
     }
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("EvanProvisional"))
-        {
-
-            if(!conversacionAlexEnd && this.gameObject.name == "AlexProvisional")
-            {
-                Conversar();
-            }
-            Debug.Log("Entró al colllider");
-        }
-       
-
-    }
-
-    private void OnTriggerExit(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("EvanProvisional"))
-        {
-            
-            Debug.Log("Salió del colllider");
-        }
-    }
 
     private void ConversationStart()
     {
+        control.DesactivarMapSoloCamara();
         control.DesactivarMap();
     }
 
  
     private void ConversationEnd()
     {
-        if (!esRevisor)
+        if (actualConversation == MyConversations[CONVERSACIONALEX])
         {
             conversacionAlexEnd = true;
-            control.ActivarMap();
+            control.DesactivarMap();
+            control.ActivarMapSoloCamara();
             objeto = GameObject.FindGameObjectWithTag("Revisor");
-        }else
+        }else if (actualConversation == MyConversations[CONVERSACIONREVISOR1])
         {
             conversacionRevEnd = true;
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+        } else if(actualConversation == MyConversations[CONVERSACIONPUERTA])
+        {
+            haIdoPuerta = true;
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+        } else if (actualConversation == MyConversations[CONVERSACIONREVISOR2])
+        {
+            control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
     }
 
+    private void ConversarA(InputAction.CallbackContext context)
+    {
+        if (context.ReadValue<float>() == 1 && isPlayerInRange)
+        {
 
+            ConversationManager.Instance.StartConversation(actualConversation);
+        }
+    }
 
     public bool getConversacionAlexEnd()
     {
@@ -159,7 +174,26 @@ public class DialogInit : MonoBehaviour
     {
         return conversacionRevEnd;
     }
+    public bool getHaIdoPuerta()
+    {
+        return haIdoPuerta;
+    }
 
+    public void setActive()
+    {
+        imagenAviso.SetActive(true);
+    }
+    public void setNotActive()
+    {
+        imagenAviso.SetActive(false);
+    }
 
-
+    public void isInRange()
+    {
+        isPlayerInRange = true;
+    }
+    public void isNotInRange()
+    {
+        isPlayerInRange = false;
+    }
 }

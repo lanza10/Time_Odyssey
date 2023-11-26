@@ -823,9 +823,12 @@ MonoBehaviour:
   MyConversations:
   - {fileID: 2037389665}
   - {fileID: 1448079754}
+  - {fileID: 1077830082}
+  - {fileID: 430961949}
   actualConversation: {fileID: 0}
   convMan: {fileID: 0}
   esRevisor: 0
+  imagenAviso: {fileID: 1002314969}
 --- !u!4 &137607643
 Transform:
   m_ObjectHideFlags: 0
@@ -839,7 +842,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &151731758
 Transform:
@@ -984,7 +987,7 @@ Transform:
   - {fileID: 1638519310}
   - {fileID: 755297904}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &167014586
 GameObject:
@@ -1459,7 +1462,7 @@ Transform:
   m_Children:
   - {fileID: 843497062}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &237543912
 GameObject:
@@ -1837,37 +1840,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &339618715
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 339618716}
-  m_Layer: 0
-  m_Name: PuertaVagonMaquinista
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &339618716
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339618715}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7538614, y: 2.0379217, z: 21.983355}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &353849821
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,7 +6374,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002314969}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6412,7 +6384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -519.3288, y: -7.6828}
+  m_AnchoredPosition: {x: -523.7, y: 6.326}
   m_SizeDelta: {x: 44.7736, y: 39.221}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002314971
@@ -7119,9 +7091,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 119272, guid: 8c66e2fd21d94be41ab66f591a280f29, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1077709625}
-    - targetCorrespondingSourceObject: {fileID: 119272, guid: 8c66e2fd21d94be41ab66f591a280f29, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1077709626}
   m_SourcePrefab: {fileID: 100100000, guid: 8c66e2fd21d94be41ab66f591a280f29, type: 3}
 --- !u!65 &1077709625
 BoxCollider:
@@ -7144,23 +7113,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 30, y: 30, z: 30}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1077709626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029993915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d195c4b15aa59a4ba9d98420e71f1ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 2088654953}
-  MyConversation: {fileID: 1987901765}
-  convMan: {fileID: 0}
-  conversacionAlexEnd: 0
-  imagenAviso: {fileID: 1002314969}
 --- !u!1 &1077830080
 GameObject:
   m_ObjectHideFlags: 0
@@ -8853,10 +8805,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8496648089076792855, guid: 1d47a97925fda1e489c2d34c0b4eb638, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1371750094}
+      addedObject: {fileID: 1371750095}
     - targetCorrespondingSourceObject: {fileID: 8496648089076792855, guid: 1d47a97925fda1e489c2d34c0b4eb638, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1371750095}
+      addedObject: {fileID: 1371750099}
   m_SourcePrefab: {fileID: 100100000, guid: 1d47a97925fda1e489c2d34c0b4eb638, type: 3}
 --- !u!4 &1371750090 stripped
 Transform:
@@ -8878,23 +8830,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8496648089076792855, guid: 1d47a97925fda1e489c2d34c0b4eb638, type: 3}
   m_PrefabInstance: {fileID: 1371750089}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1371750094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371750093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d195c4b15aa59a4ba9d98420e71f1ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 2088654953}
-  MyConversation: {fileID: 1077830082}
-  convMan: {fileID: 0}
-  conversacionAlexEnd: 0
-  imagenAviso: {fileID: 1002314969}
 --- !u!65 &1371750095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8916,6 +8851,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 20.05293, z: 2}
   m_Center: {x: 0, y: 2.026465, z: 0.00000011920929}
+--- !u!114 &1371750099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371750093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bc814f53f3bd94980b09418c6db9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogo: {fileID: 137607642}
 --- !u!1 &1383335161
 GameObject:
   m_ObjectHideFlags: 0
@@ -11465,7 +11413,6 @@ GameObject:
   - component: {fileID: 1949931605}
   - component: {fileID: 1949931604}
   - component: {fileID: 1949931609}
-  - component: {fileID: 1949931610}
   - component: {fileID: 1949931611}
   m_Layer: 0
   m_Name: RevisorProvisional
@@ -11579,23 +11526,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogo: {fileID: 137607642}
   evan: {fileID: 2088654954}
---- !u!114 &1949931610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949931603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d195c4b15aa59a4ba9d98420e71f1ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 2088654953}
-  MyConversation: {fileID: 430961949}
-  convMan: {fileID: 0}
-  conversacionAlexEnd: 0
-  imagenAviso: {fileID: 1002314969}
 --- !u!136 &1949931611
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12479,15 +12409,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 13
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":30.40001,\"yPos\":40},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":null,\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Te
-    acabas de despertar...\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":33.1999969,\"yPos\":136.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFD\xF3nde
-    estamos?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":40.1999969,\"yPos\":237.799988},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Estamos
-    en el tren, Evan. \xBFOtra vez te quedaste dormido?\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":56.1999969,\"yPos\":340.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED,
-    parece que s\xED...\xBFCu\xE1nto tiempo he estado dormido esta vez?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":93.2,\"yPos\":447.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Solo
-    unos minutos. No te preocupes, a\xFAn queda mucho camino por delante.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":284.2,\"yPos\":56.8000031},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Espera...espera...Esto
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":344.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Te
+    acabas de despertar...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":347.3,\"yPos\":118.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFD\xF3nde
+    estamos?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":354.3,\"yPos\":219.799988},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Estamos
+    en el tren, Evan. \xBFOtra vez te quedaste dormido?\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":370.3,\"yPos\":322.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED,
+    parece que s\xED...\xBFCu\xE1nto tiempo he estado dormido esta vez?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":407.3,\"yPos\":429.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Solo
+    unos minutos. No te preocupes, a\xFAn queda mucho camino por delante.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":598.3,\"yPos\":38.8000031},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Espera...espera...Esto
     ya ha pasado antes. \xBFNo hemos hablado exactamente de esto la \xFAtima vez
-    que me he despertado?\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":347.2,\"yPos\":182.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHablar
-    de qu\xE9? Estas actuando extra\xF1o, Evan.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":356.2,\"yPos\":300.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
+    que me he despertado?\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":661.3,\"yPos\":164.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHablar
+    de qu\xE9? Estas actuando extra\xF1o, Evan.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":670.3,\"yPos\":282.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
     olv\xEDdalo, no importa. Sigamos conversando.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
