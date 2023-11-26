@@ -12,6 +12,9 @@ public class Revisor : MonoBehaviour
     private float velocidad = 2f;
     private bool semaforo;
     private Vector3 posInit;
+    private bool estaEnMedio = false
+        ;
+    private Vector3 medio =  new Vector3(4.5f,0.658f, 15.6f);
     enum CONV { NOINICIADA, INICIADA, ACABADA}
     private CONV _conv;
     CONV conv
@@ -99,21 +102,50 @@ public class Revisor : MonoBehaviour
         Vector3 miVector = new Vector3(1f, 0f, 0f);
         Vector3 direccion = (evan.position + miVector ) - transform.position;
         direccion.Normalize();
-        transform.Translate(direccion * velocidad * Time.deltaTime);
-        if (transform.position == evan.position + miVector)
+        Vector3 direccionMedio = medio - transform.position;
+         direccionMedio.Normalize();
+        if (!estaEnMedio)
         {
-            semaforo = false;
+            Debug.Log("A");
+            transform.Translate(direccionMedio * velocidad * Time.deltaTime);
+            if (transform.position == medio)
+            {
+                estaEnMedio = true;
+            }
+        }else
+        {
+            transform.Translate(direccion * velocidad * Time.deltaTime);
+            if (transform.position == evan.position + miVector)
+            {
+                semaforo = false;
+                estaEnMedio= false;
+            }
         }
+        
     }
     void desplazamientoHaciaInicio()
     {
         Vector3 direccion = posInit - transform.position;
         direccion.Normalize();
-        transform.Translate(direccion * velocidad * Time.deltaTime);
-        if (transform.position == posInit)
+        Vector3 direccionMedio = medio - transform.position;
+        direccionMedio.Normalize();
+        if (!estaEnMedio)
         {
-            semaforo = false;
+            transform.Translate(direccionMedio * velocidad * Time.deltaTime);
+            if (transform.position == medio)
+            {
+                estaEnMedio = true;
+            }
+        }else
+        {
+            transform.Translate(direccion * velocidad * Time.deltaTime);
+            if (transform.position == posInit)
+            {
+                semaforo = false;
+               
+            }
         }
+        
     }
 
 
