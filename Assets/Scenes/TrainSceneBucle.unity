@@ -2328,11 +2328,11 @@ PrefabInstance:
     - target: {fileID: -1401954025227548340, guid: 1d47a97925fda1e489c2d34c0b4eb638, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2176201be9c23ed4d852f6b544db2bc2, type: 2}
+      objectReference: {fileID: 2100000, guid: 31ec5ecd7e0f89e42a43d84c24034b49, type: 2}
     - target: {fileID: -250047796286250478, guid: 1d47a97925fda1e489c2d34c0b4eb638, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2217f0af65a97c847a1f6058deaf4623, type: 2}
+      objectReference: {fileID: 2100000, guid: 31ec5ecd7e0f89e42a43d84c24034b49, type: 2}
     - target: {fileID: 919132149155446097, guid: 1d47a97925fda1e489c2d34c0b4eb638, type: 3}
       propertyPath: m_Name
       value: Vagon2
