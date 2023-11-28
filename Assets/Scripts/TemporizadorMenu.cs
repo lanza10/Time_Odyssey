@@ -15,6 +15,7 @@ public class TemporizadorMenu : MonoBehaviour
     {
         currentTime = totalTime;
         audioSource = canvas.GetComponent<AudioSource>();
+        
     }
 
     /*private void Awake()
@@ -23,14 +24,14 @@ public class TemporizadorMenu : MonoBehaviour
     }*/
     void Update()
     {
-        if(currentTime == 10)
+        if(currentTime <= 6.7 && currentTime>0)
         {
             Debug.Log("JOPETIIIIIIIIIISISSS");
             /*soundManager.SeleccionAudio(1, 0.5f);*/
             if (audioSource != null)
             {
                 // Activar el AudioSource
-                audioSource.Play();
+                audioSource.enabled = true;
             }
         }
         if (currentTime > 0)
