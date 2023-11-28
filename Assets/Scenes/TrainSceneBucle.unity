@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 164455104}
   m_Layer: 0
   m_Name: MaquinistaProvisional
-  m_TagString: Untagged
+  m_TagString: Maquinista
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -956,7 +956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164455103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.032, y: 0.841, z: 32.49}
+  m_LocalPosition: {x: 4.702, y: 0.841, z: 42.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1105,6 +1105,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &177554180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+  m_PrefabInstance: {fileID: 568779999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &177554181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177554180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5, y: 5, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &177554183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177554180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62796d93c873e2438c404277dce5552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evan: {fileID: 2088654953}
+  imagenInteract: {fileID: 1002314969}
 --- !u!1 &187105826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,6 +3443,89 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
   m_PrefabInstance: {fileID: 543389241}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &568779999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_Name
+      value: Modern Vending Machine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_TagString
+      value: MaquinaCafe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 177554181}
+    - targetCorrespondingSourceObject: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 177554183}
+  m_SourcePrefab: {fileID: 100100000, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
 --- !u!1 &581884662
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,19 +5322,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 13
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-12.8000031,\"yPos\":64.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Echar
-    el sedante en el caf\xE9\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":471.2,\"yPos\":83.8},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Darle
-    el caf\xE9 sin sedante\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":14.1999969,\"yPos\":295.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tocar
-    el bot\xF3n rojo\",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":269.2,\"yPos\":303.8},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Cambiar
-    trayectoria \",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":487.2,\"yPos\":281.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parar
-    el tren\",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":105.2,\"yPos\":479.8},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xEDa
-    1\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":329.2,\"yPos\":495.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xEDa
-    2\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":529.2,\"yPos\":465.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xEDa
-    3\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":238.400024,\"yPos\":52},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"El
-    maquinista est\xE1 muy concentrado\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":454.2,\"yPos\":168.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muchas
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":63.2999725,\"yPos\":34.8000031},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Echar
+    el sedante en el caf\xE9\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":547.3,\"yPos\":53.8000031},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Darle
+    el caf\xE9 sin sedante\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":90.29997,\"yPos\":265.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tocar
+    el bot\xF3n rojo\",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":345.3,\"yPos\":273.8},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Cambiar
+    trayectoria \",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":563.3,\"yPos\":251.799988},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parar
+    el tren\",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":181.299973,\"yPos\":449.8},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xEDa
+    1\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":405.3,\"yPos\":465.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xEDa
+    2\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":605.3,\"yPos\":435.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"V\xEDa
+    3\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":314.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"El
+    maquinista est\xE1 muy concentrado\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":530.3,\"yPos\":138.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muchas
     gracias muchacho, no iba a desviar el tren de ninguna manera pero me hac\xEDa
-    mucha falta ese caf\xE9.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":34.1999969,\"yPos\":156.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parece
-    que el maquinista se ha quedado dormido\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":317.2,\"yPos\":378.8},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parece
+    mucha falta ese caf\xE9.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":110.299973,\"yPos\":126.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parece
+    que el maquinista se ha quedado dormido\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":393.3,\"yPos\":348.8},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parece
     que el camino se divide en 3 v\xEDas m\xE1s adelante...\xBFpor c\xFAal quieres
     ir?\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -6030,6 +6153,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: maquina
+      value: 
+      objectReference: {fileID: 177554183}
+    - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: imagenAviso
       value: 
       objectReference: {fileID: 1561078376}
@@ -6037,6 +6164,10 @@ PrefabInstance:
       propertyPath: imagenInteract
       value: 
       objectReference: {fileID: 1002314969}
+    - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: MyConversations.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[0]
       value: 
@@ -6053,6 +6184,14 @@ PrefabInstance:
       propertyPath: MyConversations.Array.data[3]
       value: 
       objectReference: {fileID: 430961949}
+    - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: MyConversations.Array.data[4]
+      value: 
+      objectReference: {fileID: 1638519311}
+    - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: MyConversations.Array.data[5]
+      value: 
+      objectReference: {fileID: 755297905}
     - target: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -7648,7 +7787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65.9, y: -27.6}
+  m_AnchoredPosition: {x: -66, y: -27.5}
   m_SizeDelta: {x: 129.1756, y: 51.8729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077376179
@@ -11149,26 +11288,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 15
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":234.400024,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eyy!
-    \xBFQu\xE9 haces t\xFA aqu\xED?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":142.200012,\"yPos\":134.800018},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se\xF1or
-    maquinista, hay algo que debo contarle. Puede que no me crea.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":169.2,\"yPos\":226.799988},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Adelante
-    muchacho\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":182.2,\"yPos\":334.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"He
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":314.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eyy!
+    \xBFQu\xE9 haces t\xFA aqu\xED?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":222.299988,\"yPos\":134.800018},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se\xF1or
+    maquinista, hay algo que debo contarle. Puede que no me crea.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":249.299973,\"yPos\":226.799988},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Adelante
+    muchacho\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":262.3,\"yPos\":334.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"He
     estado notando algo extra\xF1o en este tren...C\xE1da vez que pasamos por el
     t\xFAnel, todo vuelve a empezar. Es como si estuv\xEDeramos atrapados en un bucle
-    temporal.\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":210.2,\"yPos\":475.8},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eso
-    suena como una historia de ciencia ficci\xF3n, joven. \xBFEst\xE1s bien?\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":461.2,\"yPos\":52.7999878},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+    temporal.\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":290.3,\"yPos\":475.8},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eso
+    suena como una historia de ciencia ficci\xF3n, joven. \xBFEst\xE1s bien?\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":541.3,\"yPos\":52.7999878},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     juro, es la verdad. No s\xE9 c\xF3mo explicarlo, pero necesito su ayuda para
-    entender lo que est\xE1 sucediendo y c\xF3mo podemos detenerlo.\\r\\n\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":548.2,\"yPos\":167.799988},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Debo
+    entender lo que est\xE1 sucediendo y c\xF3mo podemos detenerlo.\\r\\n\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":628.3,\"yPos\":167.799988},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Debo
     admitir que es la historia m\xE1s extra\xF1a que he escuchado. Pero, supongamos
-    que tienes raz\xF3n, \xBFqu\xE9 quieres que haga al respecto?\\r\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":480.2,\"yPos\":272.8},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
+    que tienes raz\xF3n, \xBFqu\xE9 quieres que haga al respecto?\\r\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":560.3,\"yPos\":272.8},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
     Se\xF1or maquinista, por favor, debe entender que esto es grave. Debemos desviar
-    el tren para salir de este bucle y averiguar lo que est\xE1 ocurriendo.\\r\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":475.2,\"yPos\":368.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+    el tren para salir de este bucle y averiguar lo que est\xE1 ocurriendo.\\r\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":555.3,\"yPos\":368.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     siento, joven, pero no puedo tomar una decisi\xF3n tan dr\xE1stica basada en
-    tu historia. No tengo raz\xF3n para creerte.\\r\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":469.2,\"yPos\":490.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Entiendo
-    que suene incre\xEDble, pero esto es real. Hay algo extra\xF1o sucediendo aqu\xED.\\r\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":708.2,\"yPos\":408.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
+    tu historia. No tengo raz\xF3n para creerte.\\r\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":549.3,\"yPos\":490.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Entiendo
+    que suene incre\xEDble, pero esto es real. Hay algo extra\xF1o sucediendo aqu\xED.\\r\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":788.3,\"yPos\":408.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
     Escucha, te dir\xE9 lo siguiente: si me traes un caf\xE9 bien caliente de la
-    cafeter\xEDa del tren, considerar\xE9 desviar el tren. \xBFQu\xE9 dices?\\r\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":755.2,\"yPos\":259.8},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
-    \xBFUn caf\xE9? \xBFEn serio? \xBFEso es todo lo que necesitas?\\r\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":801.2,\"yPos\":107.8},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"As\xED
+    cafeter\xEDa del tren, considerar\xE9 desviar el tren. \xBFQu\xE9 dices?\\r\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":835.3,\"yPos\":259.8},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
+    \xBFUn caf\xE9? \xBFEn serio? \xBFEso es todo lo que necesitas?\\r\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":881.3,\"yPos\":107.8},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"As\xED
     es. Si me traes un caf\xE9, te prometo que desviar\xE9 el tren. Es una peque\xF1a
     tarea a cambio de tu solicitud.\\r\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Maquinista\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110

@@ -92,6 +92,10 @@ public class CharacterControl : MonoBehaviour
     {
         inventario.objetos.Add( o );
     }
+    public void removeObjeto(GameObject o)
+    {
+        inventario.objetos.Remove(o);
+    }
 
     public void Move()
     {

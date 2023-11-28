@@ -23,12 +23,17 @@ public class DialogInit : MonoBehaviour
     public GameObject imagenAviso;
     public GameObject imagenInteract;
     private bool isPlayerInRange;
+    public MaquinaCafe maquina;
+
+    //Indices para las conversaciones
     private const int CONVERSACIONALEX = 0;
     private const int CONVERSACIONREVISOR1 = 1;
     private const  int CONVERSACIONPUERTA = 2;
     private const int CONVERSACIONREVISOR2 = 3;
+    private const int CONVERSACIONMAQUINISTA = 4;
+    private const int CONVERSACIONFINAL = 5;
 
-    public static event Action<string> OnCharacterInteraction;
+
 
     private void OnEnable()
     {
@@ -150,6 +155,12 @@ public class DialogInit : MonoBehaviour
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
+        else if(actualConversation == MyConversations[CONVERSACIONFINAL])
+        {
+            control.removeObjeto(maquina.getCafe());
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+        }
         else {
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
@@ -165,8 +176,10 @@ public class DialogInit : MonoBehaviour
             if (control.inventario.objetos.Contains(llave) && objeto.CompareTag("Puerta"))
             {
                 objeto.gameObject.SetActive(false);
+                control.removeObjeto(llave);
                 imagenInteract.SetActive(false);
-            } else
+            } 
+            else
             {
                 ConversationManager.Instance.StartConversation(actualConversation);
             }
@@ -178,13 +191,14 @@ public class DialogInit : MonoBehaviour
         if (other.CompareTag("Alex"))
         {
             if(conversacionAlexEnd) { 
-            OnCharacterInteraction?.Invoke("Alex");
+                //Conversacion posterior con alex (no hay por ahora)
             }
         }
         else if (other.CompareTag("Revisor") && !control.inventario.objetos.Contains(llave))
         {
             if (conversacionRevEnd)
             {
+                //Evan habla con el revisor(en libertad)
                 isPlayerInRange = true;
                 imagenAviso.SetActive(true);
                 actualConversation = MyConversations[CONVERSACIONREVISOR2];
@@ -196,12 +210,14 @@ public class DialogInit : MonoBehaviour
             {
                 if(control.inventario.objetos.Contains(llave))
                 {
+                    //Evan llega a la puerta con la llave
                     isPlayerInRange = true;
                     imagenInteract.SetActive(true);
                     objeto = other.gameObject;
                 }
                 else
                 {
+                    //Evan llega a la puerta sin la llave
                     actualConversation = MyConversations[CONVERSACIONPUERTA];
                     isPlayerInRange = true;
                     imagenAviso.SetActive(true);
@@ -209,7 +225,25 @@ public class DialogInit : MonoBehaviour
                ;
             }
         }
-       
+        else if (other.CompareTag("Maquinista"))
+        {
+            if (!control.inventario.objetos.Contains(maquina.getCafe()))
+            {
+                //Evan llega por primera vez al maquinista (no tiene el café)
+                actualConversation = MyConversations[CONVERSACIONMAQUINISTA];
+                isPlayerInRange = true;
+                imagenAviso.SetActive(true);
+            }
+            else
+            {
+                //Evan llega con el café y el sedante(o no) (Conversación Final)
+                actualConversation = MyConversations[CONVERSACIONFINAL];
+                isPlayerInRange = true;
+                imagenAviso.SetActive(true);
+            }
+        }
+
+
     }
 
     private void OnTriggerExit(Collider other)

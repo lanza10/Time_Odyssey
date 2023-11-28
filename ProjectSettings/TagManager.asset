@@ -10,6 +10,8 @@ TagManager:
   - Revisor
   - Conversacion
   - Puerta
+  - Maquinista
+  - MaquinaCafe
   layers:
   - Default
   - TransparentFX
