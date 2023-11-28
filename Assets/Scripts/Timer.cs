@@ -11,15 +11,26 @@ public class Timer : MonoBehaviour
     public int minutos;
     private float totalTime; 
     private float currentTime;
-
+    //private SoundManager soundManager;
+ 
     void Start()
     {
         totalTime = minutos * 60;
         currentTime = totalTime;
     }
 
+    /*private void Awake()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+    }*/
+
     void Update()
     {
+        /*if (currentTime == 10)
+        {
+            soundManager.SeleccionAudio(1, 0.5f);
+        }*/
+ 
         if (currentTime > 0)
         {
             currentTime -= Time.deltaTime;

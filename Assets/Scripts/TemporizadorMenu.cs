@@ -7,14 +7,32 @@ public class TemporizadorMenu : MonoBehaviour
 {
     private float totalTime = 30; //Segundos de espera hasta entrar al menú
     private float currentTime;
+    // private SoundManager soundManager;
+    public Canvas canvas;
+    private AudioSource audioSource;
 
     void Start()
     {
         currentTime = totalTime;
+        audioSource = canvas.GetComponent<AudioSource>();
     }
 
+    /*private void Awake()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+    }*/
     void Update()
     {
+        if(currentTime == 10)
+        {
+            Debug.Log("JOPETIIIIIIIIIISISSS");
+            /*soundManager.SeleccionAudio(1, 0.5f);*/
+            if (audioSource != null)
+            {
+                // Activar el AudioSource
+                audioSource.Play();
+            }
+        }
         if (currentTime > 0)
         {
             currentTime -= Time.deltaTime;    
@@ -24,6 +42,7 @@ public class TemporizadorMenu : MonoBehaviour
             currentTime = 0;
             SceneManager.LoadScene("MainMenu");
         }
+
     }
 
 }
