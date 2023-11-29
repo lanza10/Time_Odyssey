@@ -9,8 +9,8 @@ public class CharacterControl : MonoBehaviour
     private Map _playersControl = null;
     private MapSoloCamara _onlyCamControl= null;
     public Inventario inventario;
-    private float _walkSpeed = 5f;
-    private float _sprintingSpeed = 8f;
+    private float _walkSpeed = 25f;
+    private float _sprintingSpeed = 40f;
 
     private bool _isGrounded = true;
     private bool _isSprinting = false;

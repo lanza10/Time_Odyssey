@@ -9,13 +9,13 @@ public class Revisor : MonoBehaviour
     enum ESTADOS {QUIETO, CAMINANDO, REVISANDO, ALTERADO  }
     //Stack<ESTADOS> SSstate = new Stack<ESTADOS>();
     public Transform evan;
-    private float velocidad = 2f;
+    private float velocidad = 16f;
     private bool semaforo;
     private Vector3 posInit;
     private bool estaEnMedio = false;
     Rigidbody rb;
        
-    private Vector3 medio =  new Vector3(-4.832f,0.439f,-24.718f);
+    private Vector3 medio =  new Vector3(69.9f, 12.11387f, 716.15f);
     enum CONV { NOINICIADA, INICIADA, ACABADA}
     private CONV _conv;
     CONV conv
@@ -54,63 +54,73 @@ public class Revisor : MonoBehaviour
         switch (estado)
         {
             case ESTADOS.QUIETO:
-                if (dialogo.getConversacionAlexEnd()) {
-                    
-                    estado = ESTADOS.CAMINANDO;
+                if (!dialogo.getConversacionRevEnd())
+                {
+                    if (dialogo.getConversacionAlexEnd())
+                    {
+                        estado = ESTADOS.CAMINANDO;
+                    }
+                }
+                else
+                {
+                    Debug.Log("Quieto");
+                    break;   
                 }
                 break;
             case ESTADOS.CAMINANDO:
-                if(semaforo) {
-                    if (!dialogo.getConversacionRevEnd())
-                    {
-                        desplazamientoHaciaEvan();
-                    }
-                    else
-                    {
-                        desplazamientoHaciaInicio();
-                    }
-                }else
-                {
-                    estado = ESTADOS.REVISANDO;
-                }
-                //Debug.Log("Estoy Caminando");
-                break;
-           case ESTADOS.REVISANDO:
-                switch (conv)
-                {
-                    case CONV.NOINICIADA:
-                        dialogo.Conversar();
-                        conv = CONV.INICIADA;
-                        break;
-                    case CONV.INICIADA:
-                        if (dialogo.getConversacionRevEnd())
+                        Debug.Log("AAAA");
+                        if (semaforo) {
+                            if (!dialogo.getConversacionRevEnd())
+                            {
+                                desplazamientoHaciaEvan();
+                            }
+                            else
+                            {
+                                desplazamientoHaciaInicio();
+                            }
+                        } else
                         {
-                            conv = CONV.ACABADA;
+                            estado = ESTADOS.REVISANDO;
                         }
+                        //Debug.Log("Estoy Caminando");
                         break;
-                    case CONV.ACABADA:
-                        estado = ESTADOS.CAMINANDO;
+                    case ESTADOS.REVISANDO:
+                        switch (conv)
+                        {
+                            case CONV.NOINICIADA:
+                                dialogo.Conversar();
+                                conv = CONV.INICIADA;
+                                break;
+                            case CONV.INICIADA:
+                                if (dialogo.getConversacionRevEnd())
+                                {
+                                    conv = CONV.ACABADA;
+                                }
+                                break;
+                            case CONV.ACABADA:
+                                estado = ESTADOS.CAMINANDO;
+                                break;
+                        }
+
                         break;
+                    case ESTADOS.ALTERADO:
+
+                        break;
+                    }
                 }
-                    
-                break;
-            case ESTADOS.ALTERADO:
-                
-                break;
-        }
-    }
 
     void desplazamientoHaciaEvan()
     {
-        Vector3 miVector = new Vector3(1f, 0f, 0f);
+        Vector3 miVector = new Vector3(12f, 0f, 0f);
         Vector3 direccion = (evan.position + miVector) - transform.position;
         direccion.Normalize();
-        Vector3 direccionMedio = medio - transform.position;
+        Vector3 direccionMedio = medio - transform.localPosition;
         direccionMedio.Normalize();
 
         if (!estaEnMedio)
         {
-            Debug.Log("A");
+            Debug.Log(direccionMedio);
+            Debug.Log("Posición actual: " + transform.position);
             rb.MovePosition(transform.position + direccionMedio * velocidad * Time.deltaTime);
 
             if (Vector3.Distance(transform.position, medio) < 0.1f)
@@ -124,6 +134,7 @@ public class Revisor : MonoBehaviour
 
             if (Vector3.Distance(transform.position, evan.position + miVector) < 0.1f)
             {
+                
                 semaforo = false;
                 estaEnMedio = false;
             }
@@ -149,8 +160,9 @@ public class Revisor : MonoBehaviour
         {
             rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, posInit) < 0.1f)
+            if (Vector3.Distance(transform.position, posInit) < 5f)
             {
+                estado = ESTADOS.QUIETO;
                 semaforo = false;
             }
         }
