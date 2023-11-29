@@ -174,6 +174,11 @@ public class DialogInit : MonoBehaviour
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
+        else if (actualConversation == MyConversations[CONVERSACIONPUERTA])
+        {
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+        }
         else {
             control.DesactivarMapSoloCamara();
             control.ActivarMap();

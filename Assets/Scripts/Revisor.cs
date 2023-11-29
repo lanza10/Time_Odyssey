@@ -132,7 +132,7 @@ public class Revisor : MonoBehaviour
         {
             rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, evan.position + miVector) < 0.1f)
+            if (Vector3.Distance(transform.position, evan.position + miVector)  < 2f)
             {
                 
                 semaforo = false;

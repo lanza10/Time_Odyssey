@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -827,6 +827,8 @@ MonoBehaviour:
   convMan: {fileID: 0}
   esRevisor: 0
   imagenAviso: {fileID: 0}
+  imagenInteract: {fileID: 0}
+  maquina: {fileID: 0}
 --- !u!4 &137607643
 Transform:
   m_ObjectHideFlags: 0
@@ -1492,7 +1494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoTimer: {fileID: 375206963}
-  minutos: 1
+  minutos: 4
 --- !u!4 &237543914
 Transform:
   m_ObjectHideFlags: 0
@@ -5578,6 +5580,22 @@ PrefabInstance:
     - target: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -2.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381575238173006714, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381575238173006714, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381575238173006714, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381575238173006714, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_ImplicitTensor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2953191319923966337, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: _speedH
@@ -11329,6 +11347,7 @@ GameObject:
   - component: {fileID: 1949931605}
   - component: {fileID: 1949931604}
   - component: {fileID: 1949931609}
+  - component: {fileID: 1949931610}
   m_Layer: 0
   m_Name: RevisorProvisionalTutorial
   m_TagString: Revisor
@@ -11441,6 +11460,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogo: {fileID: 137607642}
   evan: {fileID: 2088654954}
+--- !u!54 &1949931610
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949931603}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1964896815
 GameObject:
   m_ObjectHideFlags: 0
