@@ -12,8 +12,9 @@ public class Revisor : MonoBehaviour
     private float velocidad = 2f;
     private bool semaforo;
     private Vector3 posInit;
-    private bool estaEnMedio = false
-        ;
+    private bool estaEnMedio = false;
+    Rigidbody rb;
+       
     private Vector3 medio =  new Vector3(4.5f,0.658f, 15.6f);
     enum CONV { NOINICIADA, INICIADA, ACABADA}
     private CONV _conv;
@@ -36,13 +37,14 @@ public class Revisor : MonoBehaviour
         //Inicializando el estado de arranque del personaje
         estado = ESTADOS.QUIETO;
         conv = CONV.NOINICIADA;
+        rb = GetComponent<Rigidbody>();
         Debug.Log("HOLAAAAAAAAAAAA");
         posInit= transform.position;
         //SSstate.Clear();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MainStateMachine();
     }
@@ -98,30 +100,34 @@ public class Revisor : MonoBehaviour
         }
     }
 
-   void desplazamientoHaciaEvan() {
+    void desplazamientoHaciaEvan()
+    {
         Vector3 miVector = new Vector3(1f, 0f, 0f);
-        Vector3 direccion = (evan.position + miVector ) - transform.position;
+        Vector3 direccion = (evan.position + miVector) - transform.position;
         direccion.Normalize();
         Vector3 direccionMedio = medio - transform.position;
-         direccionMedio.Normalize();
+        direccionMedio.Normalize();
+
         if (!estaEnMedio)
         {
             Debug.Log("A");
-            transform.Translate(direccionMedio * velocidad * Time.deltaTime);
-            if (transform.position == medio)
+            rb.MovePosition(transform.position + direccionMedio * velocidad * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, medio) < 0.1f)
             {
                 estaEnMedio = true;
             }
-        }else
+        }
+        else
         {
-            transform.Translate(direccion * velocidad * Time.deltaTime);
-            if (transform.position == evan.position + miVector)
+            rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, evan.position + miVector) < 0.1f)
             {
                 semaforo = false;
-                estaEnMedio= false;
+                estaEnMedio = false;
             }
         }
-        
     }
     void desplazamientoHaciaInicio()
     {
@@ -129,23 +135,25 @@ public class Revisor : MonoBehaviour
         direccion.Normalize();
         Vector3 direccionMedio = medio - transform.position;
         direccionMedio.Normalize();
+
         if (!estaEnMedio)
         {
-            transform.Translate(direccionMedio * velocidad * Time.deltaTime);
-            if (transform.position == medio)
+            rb.MovePosition(transform.position + direccionMedio * velocidad * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, medio) < 0.1f)
             {
                 estaEnMedio = true;
             }
-        }else
+        }
+        else
         {
-            transform.Translate(direccion * velocidad * Time.deltaTime);
-            if (transform.position == posInit)
+            rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, posInit) < 0.1f)
             {
                 semaforo = false;
-               
             }
         }
-        
     }
 
 
