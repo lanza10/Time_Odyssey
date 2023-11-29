@@ -12,6 +12,7 @@ TagManager:
   - Puerta
   - Maquinista
   - MaquinaCafe
+  - Kit
   layers:
   - Default
   - TransparentFX

@@ -32,8 +32,10 @@ public class DialogInit : MonoBehaviour
     private const int CONVERSACIONREVISOR2 = 3;
     private const int CONVERSACIONMAQUINISTA = 4;
     private const int CONVERSACIONFINAL = 5;
+    private const int CONVERSACIONKIT = 6;
 
-
+    //Kit
+    private GameObject sedante;
 
     private void OnEnable()
     {
@@ -55,6 +57,8 @@ public class DialogInit : MonoBehaviour
         esRevisor = this.gameObject.name == "RevisorProvisional";
         llave = new GameObject();
         llave.name = "Llave";
+        sedante = new GameObject();
+        sedante.name = "Sedante";
         _playersControl = new Map();
         _playersControl.Exploracion.Conversar.performed += ConversarA;
         _playersControl.Conversacion.Confirmar.performed += Confirmar;
@@ -161,6 +165,15 @@ public class DialogInit : MonoBehaviour
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
+        else if (actualConversation == MyConversations[CONVERSACIONKIT])
+        {
+            if (ConversationManager.Instance.GetBool("CogeSedante"))
+            {
+                control.addObjeto(sedante);
+            }
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+        }
         else {
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
@@ -234,13 +247,24 @@ public class DialogInit : MonoBehaviour
                 isPlayerInRange = true;
                 imagenAviso.SetActive(true);
             }
-            else
+            else if(control.inventario.objetos.Contains(maquina.getCafe()) && control.inventario.objetos.Contains(sedante))
             {
                 //Evan llega con el café y el sedante(o no) (Conversación Final)
                 actualConversation = MyConversations[CONVERSACIONFINAL];
                 isPlayerInRange = true;
                 imagenAviso.SetActive(true);
             }
+        }
+        else if (other.CompareTag("Kit"))
+        {
+            //Evan llega al kit médico
+            if (!control.inventario.objetos.Contains(sedante))
+            {
+                actualConversation = MyConversations[CONVERSACIONKIT];
+                isPlayerInRange = true;
+                imagenAviso.SetActive(true);
+            }
+            
         }
 
 
