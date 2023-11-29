@@ -8076,7 +8076,7 @@ MonoBehaviour:
   NodeID: 10
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 24a0a2f2cc9025c43a96716b066cdbf8, type: 3}
 --- !u!114 &1093921325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8095,7 +8095,7 @@ MonoBehaviour:
   NodeID: 8
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: efd04d181032ca546be8a8281efea15e, type: 3}
 --- !u!114 &1093921326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8114,7 +8114,7 @@ MonoBehaviour:
   NodeID: 7
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 9329a9aaaf12ae644aa2191413f9f271, type: 3}
 --- !u!114 &1093921327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8133,7 +8133,7 @@ MonoBehaviour:
   NodeID: 5
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: a2aac5d7d9dfdc64a90a7d404e6fbc49, type: 3}
 --- !u!114 &1093921328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8152,7 +8152,7 @@ MonoBehaviour:
   NodeID: 3
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 3a2d89e0b693c8a4487ac0687fc7aef6, type: 3}
 --- !u!114 &1093921329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8171,7 +8171,7 @@ MonoBehaviour:
   NodeID: 1
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 61c2a26aa2fe5be469b2c808fc805dd4, type: 3}
 --- !u!114 &1093921330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8209,7 +8209,7 @@ MonoBehaviour:
   NodeID: 12
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 072b39d61cebc8d4ebd194f391cf9307, type: 3}
 --- !u!1 &1094339964
 GameObject:
   m_ObjectHideFlags: 0
@@ -10388,11 +10388,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 3
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":54.40001,\"yPos\":53},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
-    tardes, se\xF1or. \xBFPuedo ver su billete, por favor?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":83.2,\"yPos\":172.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Disculpe
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":264.399963,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
+    tardes, se\xF1or. \xBFPuedo ver su billete, por favor?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":293.199951,\"yPos\":141.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Disculpe
     se\xF1or, algo extra\xF1o est\xE1 sucediendo en este tren... Ya viv\xED todo
-    eesto antes.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":101.2,\"yPos\":293.8},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Jajajajaja,
-    debes haberte quedado dormido y haberlo so\xF1ado.\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    eesto antes.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":311.199951,\"yPos\":262.8},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Jajajajaja,
+    debes haberte quedado dormido y haberlo so\xF1ado.\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6}]}"
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -12081,7 +12081,7 @@ MonoBehaviour:
   NodeID: 2
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 03de9bcda9fef0141b4a5668cd265276, type: 3}
 --- !u!114 &1810523570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12100,7 +12100,7 @@ MonoBehaviour:
   NodeID: 1
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 59e7031ba4d748d419613a6660f82b7f, type: 3}
 --- !u!114 &1810523571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12119,7 +12119,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 9d6c06394f5576245bcd54394fbdfaf1, type: 3}
 --- !u!1 &1815698005
 GameObject:
   m_ObjectHideFlags: 0
@@ -13721,16 +13721,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 13
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":344.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Te
-    acabas de despertar...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":347.3,\"yPos\":118.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFD\xF3nde
-    estamos?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":354.3,\"yPos\":219.799988},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Estamos
-    en el tren, Evan. \xBFOtra vez te quedaste dormido?\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":370.3,\"yPos\":322.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED,
-    parece que s\xED...\xBFCu\xE1nto tiempo he estado dormido esta vez?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":407.3,\"yPos\":429.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Solo
-    unos minutos. No te preocupes, a\xFAn queda mucho camino por delante.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":598.3,\"yPos\":38.8000031},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Espera...espera...Esto
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":264.399963,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Te
+    acabas de despertar...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":267.199951,\"yPos\":118.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFD\xF3nde
+    estamos?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":274.199951,\"yPos\":219.799988},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Estamos
+    en el tren, Evan. \xBFOtra vez te quedaste dormido?\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":290.199951,\"yPos\":322.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED,
+    parece que s\xED...\xBFCu\xE1nto tiempo he estado dormido esta vez?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":327.199951,\"yPos\":429.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Solo
+    unos minutos. No te preocupes, a\xFAn queda mucho camino por delante.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":518.199951,\"yPos\":38.8000031},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Espera...espera...Esto
     ya ha pasado antes. \xBFNo hemos hablado exactamente de esto la \xFAtima vez
-    que me he despertado?\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":661.3,\"yPos\":164.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHablar
-    de qu\xE9? Estas actuando extra\xF1o, Evan.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":670.3,\"yPos\":282.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
-    olv\xEDdalo, no importa. Sigamos conversando.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    que me he despertado?\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":581.199951,\"yPos\":164.8},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHablar
+    de qu\xE9? Estas actuando extra\xF1o, Evan.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alex\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":590.199951,\"yPos\":282.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
+    olv\xEDdalo, no importa. Sigamos conversando.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6}]}"
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
