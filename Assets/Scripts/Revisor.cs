@@ -9,13 +9,13 @@ public class Revisor : MonoBehaviour
     enum ESTADOS {QUIETO, CAMINANDO, REVISANDO, ALTERADO  }
     //Stack<ESTADOS> SSstate = new Stack<ESTADOS>();
     public Transform evan;
-    private float velocidad = 16f;
+    private float velocidad = 3f;
     private bool semaforo;
     private Vector3 posInit;
     private bool estaEnMedio = false;
     Rigidbody rb;
        
-    private Vector3 medio =  new Vector3(69.9f, 12.11387f, 716.15f);
+    private Vector3 medio =  new Vector3(19.95f, 4.944584f, 100.04f);
     enum CONV { NOINICIADA, INICIADA, ACABADA}
     private CONV _conv;
     CONV conv
@@ -110,7 +110,7 @@ public class Revisor : MonoBehaviour
 
     void desplazamientoHaciaEvan()
     {
-        Vector3 miVector = new Vector3(12f, 0f, 0f);
+        Vector3 miVector = new Vector3(1f, 0f, 0f);
         Vector3 direccion = (evan.position + miVector) - transform.position;
         direccion.Normalize();
         Vector3 direccionMedio = medio - transform.localPosition;
@@ -131,7 +131,7 @@ public class Revisor : MonoBehaviour
         {
             rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, evan.position + miVector)  < 2f)
+            if (Vector3.Distance(transform.position, evan.position + miVector)  < 0.5f)
             {
                 
                 semaforo = false;
@@ -159,7 +159,7 @@ public class Revisor : MonoBehaviour
         {
             rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, posInit) < 5f)
+            if (Vector3.Distance(transform.position, posInit) < 0.5f)
             {
                 estado = ESTADOS.QUIETO;
                 semaforo = false;
