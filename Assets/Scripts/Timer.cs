@@ -46,7 +46,7 @@ public class Timer : MonoBehaviour
             else {
                 currentTime = 0;
                 DisplayTime(currentTime);
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("TrainSceneBucle");
             }
             
         }

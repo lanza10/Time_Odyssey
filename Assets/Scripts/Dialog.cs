@@ -5,25 +5,31 @@ using UnityEngine.InputSystem;
 using DialogueEditor;
 using System;
 using Unity.VisualScripting;
+using System.Numerics;
 
 public class Dialog : MonoBehaviour
 {
     // Start is called before the first frame update
     public CharacterControl control;
-    private bool isPlayerInRange;
     private Map _playersControl = null;
-    public NPCConversation MyConversation;
-    public ConversationManager convMan;
-    public bool conversacionAlexEnd = false;
+    public NPCConversation[] MyConversations;
+    public NPCConversation actualConversation;
+    private bool conversacionAlexEnd = false;
+    private bool conversacionRevEnd = false;
+    public bool esRevisor;
+    private GameObject objeto;
     public GameObject imagenAviso;
+    private bool isPlayerInRange;
 
+
+    private const int CONVERSACIONALEX = 0;
+    private const int CONVERSACIONREVISOR1 = 1;
 
     private void OnEnable()
     {
         _playersControl.Enable();
         ConversationManager.OnConversationStarted += ConversationStart;
         ConversationManager.OnConversationEnded += ConversationEnd;
-
     }
 
     private void OnDisable()
@@ -35,18 +41,40 @@ public class Dialog : MonoBehaviour
 
     private void Awake()
     {
+
+        esRevisor = this.gameObject.name == "RevisorProvisional";
         _playersControl = new Map();
-        _playersControl.Exploracion.Conversar.performed += Conversar;
+        _playersControl.Exploracion.Conversar.performed += ConversarA;
         _playersControl.Conversacion.Confirmar.performed += Confirmar;
         _playersControl.Conversacion.Siguiente.performed += Siguiente;
         _playersControl.Conversacion.Anterior.performed += Anterior;
-        _playersControl.Conversacion.Opcion.performed += CambiaOpcion;      
+        _playersControl.Conversacion.Opcion.performed += CambiaOpcion;
 
     }
-    // Update is called once per frame
     void Update()
     {
+        if (objeto == GameObject.FindGameObjectWithTag("Alex"))
+        {
+            esRevisor = false;
+            actualConversation = MyConversations[CONVERSACIONALEX];
+        }
+        else
+        {
+            esRevisor = true;
+            if (!conversacionRevEnd)
+            {
+                actualConversation = MyConversations[CONVERSACIONREVISOR1];
+            }
+        }
     }
+
+    private void Start()
+    {
+        objeto = GameObject.FindGameObjectWithTag("Alex");
+        actualConversation = MyConversations[0];
+        Conversar();
+    }
+
     private void Confirmar(InputAction.CallbackContext context)
     {
         if (context.ReadValue<float>() == 1)
@@ -60,7 +88,7 @@ public class Dialog : MonoBehaviour
         if (context.ReadValue<float>() < 0)
         {
             ConversationManager.Instance.SelectNextOption();
-        } 
+        }
         else if (context.ReadValue<float>() > 0)
         {
             ConversationManager.Instance.SelectPreviousOption();
@@ -82,52 +110,47 @@ public class Dialog : MonoBehaviour
             ConversationManager.Instance.SelectPreviousOption();
         }
     }
-    private void Conversar(InputAction.CallbackContext context) {
-        if (context.ReadValue<float>() == 1 && isPlayerInRange) {
-            
-            ConversationManager.Instance.StartConversation(MyConversation);
-        }
-    }
-    private void OnTriggerEnter(Collider collision)
+    public void Conversar()
     {
-        if (collision.gameObject.CompareTag("EvanProvisional")) {
-            isPlayerInRange = true;
-            imagenAviso.SetActive(true);
-            Debug.Log("Entró al colllider");
-        }
-        
-        
-    }
-
-    private void OnTriggerExit(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("EvanProvisional"))
-        {
-            isPlayerInRange = false;
-            imagenAviso.SetActive(false);
-            Debug.Log("Salió del colllider");
-        }
+        ConversationManager.Instance.StartConversation(actualConversation);
     }
 
     private void ConversationStart()
     {
+        control.DesactivarMapSoloCamara();
         control.DesactivarMap();
     }
 
     private void ConversationEnd()
     {
-        if (this.gameObject.name == "AlexProvisional")
+        if (actualConversation == MyConversations[CONVERSACIONALEX])
         {
             conversacionAlexEnd = true;
+            control.DesactivarMap();
+            control.ActivarMapSoloCamara();
+            objeto = GameObject.FindGameObjectWithTag("Revisor");
         }
-        control.ActivarMap();
+        else if (actualConversation == MyConversations[CONVERSACIONREVISOR1])
+        {
+            conversacionRevEnd = true;
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+        }
+    }
+    private void ConversarA(InputAction.CallbackContext context)
+    {
+        if (context.ReadValue<float>() == 1 && isPlayerInRange)
+        {
+            ConversationManager.Instance.StartConversation(actualConversation);
+        }
     }
 
     public bool getConversacionAlexEnd()
     {
         return conversacionAlexEnd;
     }
-
-    
-
+    public bool getConversacionRevEnd()
+    {
+        return conversacionRevEnd;
+    }
 }

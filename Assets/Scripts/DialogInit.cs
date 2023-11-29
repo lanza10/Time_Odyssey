@@ -6,6 +6,7 @@ using DialogueEditor;
 using System;
 using Unity.VisualScripting;
 using System.Runtime.ConstrainedExecution;
+using UnityEngine.SceneManagement;
 
 public class DialogInit : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class DialogInit : MonoBehaviour
     private const int CONVERSACIONMAQUINISTA = 4;
     private const int CONVERSACIONFINAL = 5;
     private const int CONVERSACIONKIT = 6;
+    private const int CONVERSACIONCAFE = 7;
 
     //Kit
     private GameObject sedante;
@@ -159,14 +161,30 @@ public class DialogInit : MonoBehaviour
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
-        else if(actualConversation == MyConversations[CONVERSACIONFINAL])
+        else if(actualConversation == MyConversations[CONVERSACIONCAFE])
         {
             control.removeObjeto(maquina.getCafe());
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
+        else if (actualConversation == MyConversations[CONVERSACIONFINAL])
+        {
+            Debug.Log("AAAAAAAA");
+            control.removeObjeto(maquina.getCafe());
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+            if(ConversationManager.Instance.GetBool("DaSedante") && ConversationManager.Instance.GetBool("Gana"))
+            {
+                SceneManager.LoadScene("GameWin");
+            }
+            else if(ConversationManager.Instance.GetBool("DaSedante") && !ConversationManager.Instance.GetBool("Gana"))
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
         else if (actualConversation == MyConversations[CONVERSACIONKIT])
         {
+            Debug.Log(ConversationManager.Instance.GetBool("CogeSedante"));
             if (ConversationManager.Instance.GetBool("CogeSedante"))
             {
                 control.addObjeto(sedante);
@@ -249,8 +267,13 @@ public class DialogInit : MonoBehaviour
             }
             else if(control.inventario.objetos.Contains(maquina.getCafe()) && control.inventario.objetos.Contains(sedante))
             {
-                //Evan llega con el café y el sedante(o no) (Conversación Final)
+                //Evan llega con el café y el sedante (Conversación Final)
                 actualConversation = MyConversations[CONVERSACIONFINAL];
+                isPlayerInRange = true;
+                imagenAviso.SetActive(true);
+            }else if (control.inventario.objetos.Contains(maquina.getCafe()) && !control.inventario.objetos.Contains(sedante))
+            {
+                actualConversation = MyConversations[CONVERSACIONCAFE];
                 isPlayerInRange = true;
                 imagenAviso.SetActive(true);
             }
