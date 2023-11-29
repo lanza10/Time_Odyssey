@@ -63,7 +63,6 @@ public class Revisor : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Quieto");
                     break;   
                 }
                 break;
