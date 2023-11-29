@@ -15,7 +15,7 @@ public class Revisor : MonoBehaviour
     private bool estaEnMedio = false;
     Rigidbody rb;
        
-    private Vector3 medio =  new Vector3(4.5f,0.658f, 15.6f);
+    private Vector3 medio =  new Vector3(-4.832f,0.439f,-24.718f);
     enum CONV { NOINICIADA, INICIADA, ACABADA}
     private CONV _conv;
     CONV conv
