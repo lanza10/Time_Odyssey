@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: d6b51ce0c1dec234e881cc9324b4c302
   - enabled: 1
-    path: Assets/Scenes/TrainScene.unity
+    path: Assets/Scenes/TrainSceneMala.unity
     guid: ac38efc15e67c924588ca29740a24145
   - enabled: 0
-    path: Assets/Scenes/TrainSceneMala.unity
+    path: Assets/Scenes/TrainScene.unity
     guid: d606dd22fc4274d4ba3759cce1466211
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
