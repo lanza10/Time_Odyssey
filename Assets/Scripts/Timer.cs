@@ -11,12 +11,15 @@ public class Timer : MonoBehaviour
     public int minutos;
     private float totalTime; 
     private float currentTime;
+    public Canvas canvas;
+    private AudioSource audioSource;
     //private SoundManager soundManager;
- 
+
     void Start()
     {
         totalTime = minutos * 60;
         currentTime = totalTime;
+        audioSource = canvas.GetComponent<AudioSource>();
     }
 
     /*private void Awake()
@@ -30,7 +33,16 @@ public class Timer : MonoBehaviour
         {
             soundManager.SeleccionAudio(1, 0.5f);
         }*/
- 
+        if (currentTime <= 6.7 && currentTime > 0)
+        {
+            Debug.Log("JOPETIIIIIIIIIISISSS");
+            
+            if (audioSource != null)
+            {
+                audioSource.enabled = true;
+            }
+        }
+
         if (currentTime > 0)
         {
             currentTime -= Time.deltaTime;
