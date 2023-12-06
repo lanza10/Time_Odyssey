@@ -1,13 +1,13 @@
-
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController))]
 public class CharacterControl : MonoBehaviour
 {
     private Map _playersControl = null;
-    private MapSoloCamara _onlyCamControl= null;
+    private MapSoloCamara _onlyCamControl = null;
     public Inventario inventario;
     private float _walkSpeed = 3f;
     private float _sprintingSpeed = 6f;
@@ -16,7 +16,6 @@ public class CharacterControl : MonoBehaviour
     private bool _isSprinting = false;
     public int _jumpforce;
     private Vector3 _direction = Vector3.zero;
-    private Rigidbody _rigibody = null;
 
     public Camera _mainCamera;
     float yaw;
@@ -28,21 +27,22 @@ public class CharacterControl : MonoBehaviour
 
     private Vector3 CamForward;
     private Vector3 CamRight;
+    public CharacterController characterController;
 
 
     private void OnEnable()
     {
-        
+
     }
 
     private void OnDisable()
     {
-        
+
     }
 
     private void Awake()
     {
-        _rigibody = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
 
         _playersControl = new Map();
         _onlyCamControl = new MapSoloCamara();
@@ -57,7 +57,7 @@ public class CharacterControl : MonoBehaviour
         _playersControl.Exploracion.Camara.performed += ReadCameraInput;
         _playersControl.Exploracion.Camara.canceled += ReadCameraInput;
 
-        _onlyCamControl.Camara.Camara.performed+= ReadCameraInput;
+        _onlyCamControl.Camara.Camara.performed += ReadCameraInput;
         _onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
     }
 
@@ -69,17 +69,17 @@ public class CharacterControl : MonoBehaviour
 
     public void ReadCameraInput(InputAction.CallbackContext context)
     {
-       
+
         var input = context.ReadValue<Vector2>();
         _rotation.x = input.x;
         _rotation.y = input.y;
-        
+
     }
 
     private void FixedUpdate()
     {
-        
-        transform.LookAt( transform.position + _direction );
+
+        transform.LookAt(transform.position + _direction);
         Move();
         CheckGround();
     }
@@ -90,7 +90,7 @@ public class CharacterControl : MonoBehaviour
     }
     public void addObjeto(GameObject o)
     {
-        inventario.objetos.Add( o );
+        inventario.objetos.Add(o);
     }
     public void removeObjeto(GameObject o)
     {
@@ -99,14 +99,24 @@ public class CharacterControl : MonoBehaviour
 
     public void Move()
     {
-        if (_isSprinting) { 
-            transform.position += _direction * _sprintingSpeed * Time.deltaTime;
-        }else
+        if (_isSprinting)
         {
-            transform.position += _direction * _walkSpeed * Time.deltaTime;
+            characterController.Move(_direction * _sprintingSpeed * Time.deltaTime);
+
+            // rbEvan.MovePosition(transform.position += _direction * _sprintingSpeed * Time.deltaTime);
+            //transform.position += _direction * _sprintingSpeed * Time.deltaTime;
+
+        }
+        else
+        {
+            characterController.Move(_direction * _walkSpeed * Time.deltaTime);
+            //rbEvan.MovePosition(transform.position += _direction * _walkSpeed * Time.deltaTime);
+            //transform.position += _direction * _walkSpeed * Time.deltaTime;
+
+
         }
 
-        
+
     }
     private void CheckGround()
     {
@@ -127,17 +137,19 @@ public class CharacterControl : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(context.ReadValue<float>() == 1 && _rigibody != null && _isGrounded) {
-            _rigibody.AddForce(Vector3.up * _jumpforce);
+        if (context.ReadValue<float>() == 1 && characterController != null && _isGrounded)
+        {
+            characterController.Move(Vector3.up * _jumpforce);
         }
     }
 
     public void Sprint(InputAction.CallbackContext context)
     {
-        if(context.ReadValue<float>() == 1)
+        if (context.ReadValue<float>() == 1)
         {
             _isSprinting = true;
-        }else
+        }
+        else
         {
             _isSprinting = false;
         }
