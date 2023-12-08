@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ObjectController : MonoBehaviour
+public class ObjectContro : MonoBehaviour
 {
     private bool isPlayerInRange;
     public CharacterControl player;
