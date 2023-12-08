@@ -4275,7 +4275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -69.2, y: -29.4}
+  m_AnchoredPosition: {x: -69.2, y: 0}
   m_SizeDelta: {x: 129.1756, y: 51.8729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375242874
@@ -4890,6 +4890,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 377537657437986665, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 440532391}
+    - targetCorrespondingSourceObject: {fileID: 377537657437986665, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 440532390}
     - targetCorrespondingSourceObject: {fileID: 420388188531032655, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 440532389}
@@ -4905,6 +4911,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27551fd7d7a4a42a1fa56fb3ced7e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &440532387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 377537657437986665, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+  m_PrefabInstance: {fileID: 440532385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &440532388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 420388188531032655, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
@@ -4929,6 +4940,32 @@ MonoBehaviour:
   actualConversation: {fileID: 0}
   esRevisor: 0
   imagenAviso: {fileID: 0}
+--- !u!114 &440532390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440532387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Device: 0
+  m_PoseSource: 2
+  m_PoseProviderComponent: {fileID: 0}
+  m_TrackingType: 1
+  m_UpdateType: 0
+  m_UseRelativeTransform: 0
+--- !u!124 &440532391
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440532387}
+  m_Enabled: 1
 --- !u!4 &440532392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 356989314666043136, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}

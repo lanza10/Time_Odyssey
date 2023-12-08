@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/CarSplash.unity
+    guid: 7574fea9cfc31e84ebf90d39b38e789a
+  - enabled: 0
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.22.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 145a2a45d7bc746b19cb68410368bf96
   - enabled: 0
     path: Assets/Scenes/Splash.unity
     guid: d4a90dd878804a541ace272ed329a7e6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d6b51ce0c1dec234e881cc9324b4c302
   - enabled: 0
