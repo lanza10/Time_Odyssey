@@ -79,17 +79,17 @@ public class CharacterControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        //Rotacion de evan antigua
-        //transform.LookAt(transform.position + _direction);
+        CamDirection();
+        transform.LookAt(transform.position + _direction);
         Move();
         CheckGround();
     }
 
     private void Update()
     {
-        float camRotationX = _mainCamera.transform.rotation.eulerAngles.x;
-        transform.rotation = Quaternion.Euler(camRotationX, 0f, 0f);
+
+        //float camRotationX = _mainCamera.transform.rotation.eulerAngles.x;
+        //transform.rotation = Quaternion.Euler(camRotationX, 0f, 0f);
         //MoveCamera();
     }
     public void addObjeto(GameObject o)
