@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 [RequireComponent(typeof(CharacterController))]
 public class CharacterControl : MonoBehaviour
@@ -80,6 +81,7 @@ public class CharacterControl : MonoBehaviour
     private void FixedUpdate()
     {
         CamDirection();
+        _direction =  CamRight + CamForward;
         transform.LookAt(transform.position + _direction);
         Move();
         CheckGround();

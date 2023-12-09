@@ -15666,7 +15666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoTimer: {fileID: 1092682168}
-  minutos: 1
+  minutos: 2
   canvas: {fileID: 29425437}
 --- !u!4 &1766207667
 Transform:
