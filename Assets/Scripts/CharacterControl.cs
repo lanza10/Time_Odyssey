@@ -90,7 +90,7 @@ public class CharacterControl : MonoBehaviour
     {
         float camRotationX = _mainCamera.transform.rotation.eulerAngles.x;
         transform.rotation = Quaternion.Euler(camRotationX, 0f, 0f);
-        MoveCamera();
+        //MoveCamera();
     }
     public void addObjeto(GameObject o)
     {
