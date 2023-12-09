@@ -29,7 +29,7 @@ public class CharacterControl : MonoBehaviour
     private Vector3 CamRight;
     public CharacterController characterController;
 
-
+    
     private void OnEnable()
     {
 
@@ -54,11 +54,11 @@ public class CharacterControl : MonoBehaviour
 
         _playersControl.Exploracion.Saltar.performed += Jump;
 
-        _playersControl.Exploracion.Camara.performed += ReadCameraInput;
-        _playersControl.Exploracion.Camara.canceled += ReadCameraInput;
+        //_playersControl.Exploracion.Camara.performed += ReadCameraInput;
+        //_playersControl.Exploracion.Camara.canceled += ReadCameraInput;
 
-        _onlyCamControl.Camara.Camara.performed += ReadCameraInput;
-        _onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
+        //_onlyCamControl.Camara.Camara.performed += ReadCameraInput;
+        //_onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
     }
 
     public void ReadInput(InputAction.CallbackContext context)
@@ -71,6 +71,7 @@ public class CharacterControl : MonoBehaviour
     {
 
         var input = context.ReadValue<Vector2>();
+
         _rotation.x = input.x;
         _rotation.y = input.y;
 
@@ -79,13 +80,16 @@ public class CharacterControl : MonoBehaviour
     private void FixedUpdate()
     {
 
-        transform.LookAt(transform.position + _direction);
+        //Rotacion de evan antigua
+        //transform.LookAt(transform.position + _direction);
         Move();
         CheckGround();
     }
 
     private void Update()
     {
+        float camRotationX = _mainCamera.transform.rotation.eulerAngles.x;
+        transform.rotation = Quaternion.Euler(camRotationX, 0f, 0f);
         MoveCamera();
     }
     public void addObjeto(GameObject o)
