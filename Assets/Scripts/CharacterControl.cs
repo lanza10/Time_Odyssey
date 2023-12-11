@@ -66,7 +66,8 @@ public class CharacterControl : MonoBehaviour
     {
         var input = context.ReadValue<Vector2>();
         CamDirection();
-        _direction = input.x * CamRight + input.y * CamForward;
+        //_direction = input.x * CamRight + input.y * CamForward;
+        _direction = new  Vector3(input.x, 0, input.y);
     }
 
     public void ReadCameraInput(InputAction.CallbackContext context)
@@ -83,7 +84,7 @@ public class CharacterControl : MonoBehaviour
     {
         //CamDirection();
         //_direction =  CamRight + CamForward;
-        transform.LookAt(transform.position + _direction);
+        OrientarPersonajeHaciaCamara();
         Move();
         CheckGround();
     }
@@ -181,6 +182,14 @@ public class CharacterControl : MonoBehaviour
 
         CamForward = CamForward.normalized;
         CamRight = CamRight.normalized;
+    }
+    private void OrientarPersonajeHaciaCamara()
+    {
+        // Obtén la rotación actual de la cámara del personaje.
+        Quaternion camRotation = _mainCamera.transform.rotation;
+
+        // Orienta el personaje hacia la dirección de la cámara.
+        transform.rotation = Quaternion.Euler(0, camRotation.eulerAngles.y, 0);
     }
 
     public void DesactivarMap()
