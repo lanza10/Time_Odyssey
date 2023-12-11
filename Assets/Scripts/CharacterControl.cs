@@ -66,8 +66,8 @@ public class CharacterControl : MonoBehaviour
     {
         var input = context.ReadValue<Vector2>();
         CamDirection();
-        //_direction = input.x * CamRight + input.y * CamForward;
-        _direction = new  Vector3(input.x, 0, input.y);
+        _direction = input.x * CamRight + input.y * CamForward;
+        //_direction = new  Vector3(input.x, 0, input.y);
     }
 
     public void ReadCameraInput(InputAction.CallbackContext context)
@@ -169,7 +169,7 @@ public class CharacterControl : MonoBehaviour
         pitch -= _rotation.y * _speedV;
 
         _mainCamera.transform.eulerAngles = new Vector3(pitch, yaw, 0);
-        CamDirection();
+        //CamDirection();
     }
 
     private void CamDirection()
@@ -187,6 +187,7 @@ public class CharacterControl : MonoBehaviour
     {
         // Obtén la rotación actual de la cámara del personaje.
         Quaternion camRotation = _mainCamera.transform.rotation;
+        CamDirection();
 
         // Orienta el personaje hacia la dirección de la cámara.
         transform.rotation = Quaternion.Euler(0, camRotation.eulerAngles.y, 0);

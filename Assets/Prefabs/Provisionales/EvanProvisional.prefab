@@ -143,11 +143,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   actualConversation: {fileID: 0}
   convMan: {fileID: 0}
   esRevisor: 0
   imagenAviso: {fileID: 0}
   imagenInteract: {fileID: 0}
+  maquina: {fileID: 0}
 --- !u!65 &2899109207247371687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -182,6 +187,7 @@ GameObject:
   - component: {fileID: 1381575238173006714}
   - component: {fileID: 284939636438617888}
   - component: {fileID: 3804960784482051898}
+  - component: {fileID: 4143554933689482309}
   m_Layer: 0
   m_Name: EvanProvisional
   m_TagString: EvanProvisional
@@ -198,13 +204,13 @@ Transform:
   m_GameObject: {fileID: 5653152992196606564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9375, y: 1.5, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7584613305604670682}
   - {fileID: 5271333014621535957}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2953191319923966337
 MonoBehaviour:
@@ -221,8 +227,9 @@ MonoBehaviour:
   inventario: {fileID: 3804960784482051898}
   _jumpforce: 250
   _mainCamera: {fileID: 2365889527700952921}
-  _speedH: 4
-  _speedV: 4
+  _speedH: 1.5
+  _speedV: 1.5
+  characterController: {fileID: 0}
 --- !u!54 &1381575238173006714
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -248,7 +255,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!65 &284939636438617888
 BoxCollider:
@@ -266,7 +273,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
@@ -284,3 +291,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetos: []
+--- !u!143 &4143554933689482309
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653152992196606564}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
