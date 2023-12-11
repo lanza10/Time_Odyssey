@@ -65,6 +65,7 @@ public class CharacterControl : MonoBehaviour
     public void ReadInput(InputAction.CallbackContext context)
     {
         var input = context.ReadValue<Vector2>();
+        CamDirection();
         _direction = input.x * CamRight + input.y * CamForward;
     }
 
@@ -80,8 +81,8 @@ public class CharacterControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CamDirection();
-        _direction =  CamRight + CamForward;
+        //CamDirection();
+        //_direction =  CamRight + CamForward;
         transform.LookAt(transform.position + _direction);
         Move();
         CheckGround();
