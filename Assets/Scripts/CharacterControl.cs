@@ -30,6 +30,8 @@ public class CharacterControl : MonoBehaviour
     private Vector3 CamRight;
     public CharacterController characterController;
 
+   
+
     
     private void OnEnable()
     {
@@ -84,7 +86,7 @@ public class CharacterControl : MonoBehaviour
     {
         //CamDirection();
         //_direction =  CamRight + CamForward;
-        OrientarPersonajeHaciaCamara();
+        //OrientarPersonajeHaciaCamara();
         Move();
         CheckGround();
     }
