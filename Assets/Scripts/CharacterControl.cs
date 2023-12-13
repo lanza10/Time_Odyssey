@@ -68,8 +68,8 @@ public class CharacterControl : MonoBehaviour
     {
         var input = context.ReadValue<Vector2>();
         CamDirection();
-        _direction = input.x * CamRight + input.y * CamForward;
-        //_direction = new  Vector3(input.x, 0, input.y);
+        //_direction = input.x * CamRight + input.y * CamForward;
+        _direction = new  Vector3(input.x, 0, input.y);
     }
 
     public void ReadCameraInput(InputAction.CallbackContext context)
@@ -79,6 +79,7 @@ public class CharacterControl : MonoBehaviour
 
         _rotation.x = input.x;
         _rotation.y = input.y;
+        CamDirection();
 
     }
 
@@ -86,7 +87,7 @@ public class CharacterControl : MonoBehaviour
     {
         //CamDirection();
         //_direction =  CamRight + CamForward;
-        //OrientarPersonajeHaciaCamara();
+        OrientarPersonajeHaciaCamara();
         Move();
         CheckGround();
     }

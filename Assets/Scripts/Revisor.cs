@@ -14,8 +14,9 @@ public class Revisor : MonoBehaviour
     private Vector3 posInit;
     private bool estaEnMedio = false;
     Rigidbody rb;
-       
-    private Vector3 medio =  new Vector3(19.95f, 4.944584f, 100.04f);
+
+    //private Vector3 medio = new Vector3(19.95f, 4.944584f, 100.04f);
+    private Vector3 medio =  new Vector3(8.14f, 6.21f, 116.802f);
     enum CONV { NOINICIADA, INICIADA, ACABADA}
     private CONV _conv;
     CONV conv
@@ -110,7 +111,7 @@ public class Revisor : MonoBehaviour
 
     void desplazamientoHaciaEvan()
     {
-        Vector3 miVector = new Vector3(1f, 0f, 0f);
+        Vector3 miVector = new Vector3(-1f, 0f, 0f);
         Vector3 direccion = (evan.position + miVector) - transform.position;
         direccion.Normalize();
         Vector3 direccionMedio = medio - transform.localPosition;
