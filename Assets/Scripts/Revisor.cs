@@ -10,7 +10,7 @@ public class Revisor : MonoBehaviour
     enum ESTADOS {QUIETO, CAMINANDO, REVISANDO, ALTERADO  }
     //Stack<ESTADOS> SSstate = new Stack<ESTADOS>();
     public Transform evan;
-    private float velocidad = 3f;
+    private float velocidad = 1f;
     private bool semaforo;
     private Vector3 posInit;
     private bool estaEnMedio = false;
