@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CiudadController : MonoBehaviour
 {
-    private Vector3 posReini = new Vector3(0f, 0f, 756f);
+    private Vector3 posReini = new Vector3(0f, 0f, 968f);
     private bool estaEnReini = false;
     public float velocidad = 100f;
 
@@ -21,13 +21,13 @@ public class CiudadController : MonoBehaviour
         {
             transform.position += direccion * velocidad * Time.deltaTime;
 
-            if (Vector3.Distance(transform.position, posReini) < 3f)
+            if (Vector3.Distance(transform.position, posReini) < 1f)
             {
                 estaEnReini = true;
             }
         }else
         {
-            transform.position = new Vector3(0f, 0f, 415f);
+            transform.position = new Vector3(0f, 0f, 233f);
             estaEnReini = false;
         }
     }
