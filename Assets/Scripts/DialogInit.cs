@@ -89,6 +89,7 @@ public class DialogInit : MonoBehaviour
     private void Start()
     {
         objeto = GameObject.FindGameObjectWithTag("Alex");
+        control.ActivarMapSoloCamara();
         actualConversation = MyConversations[0];
         Conversar();
     }
@@ -134,7 +135,6 @@ public class DialogInit : MonoBehaviour
 
     private void ConversationStart()
     {
-        control.DesactivarMapSoloCamara();
         control.DesactivarMap();
     }
 
