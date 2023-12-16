@@ -82,6 +82,8 @@ public class Revisor : MonoBehaviour
                             else
                             {     
                                 anim.SetBool("andar", true);
+                                anim.SetBool("parar", false);
+                                anim.SetBool("hablar", false);
                                 desplazamientoHaciaInicio();
                             }
                         } else
@@ -129,6 +131,7 @@ public class Revisor : MonoBehaviour
         Vector3 direccionMedio = medio - transform.localPosition;
         direccionMedio.Normalize();
         anim.SetBool("andar", true);
+        anim.SetBool("parar", false);
         
 
         if (!estaEnMedio)
@@ -150,9 +153,11 @@ public class Revisor : MonoBehaviour
             Quaternion rotacionDeseada = Quaternion.Euler(0.0f, 90.0f, 0.0f);
             rb.MoveRotation(rotacionDeseada);
 
-            if (Vector3.Distance(transform.position, evan.position + miVector)  < 0.5f)
+            if (Vector3.Distance(transform.position, evan.position + miVector)  < 0.1f)
             {
-                
+                rotacionDeseada = Quaternion.Euler(0.0f, -45.0f, 0.0f);
+                rb.MoveRotation(rotacionDeseada);
+
                 semaforo = false;
                 estaEnMedio = false;
             }
@@ -183,7 +188,7 @@ public class Revisor : MonoBehaviour
             rb.MoveRotation(rotacionDeseada);
             if (Vector3.Distance(transform.position, posInit) < 0.5f)
             {
-                Quaternion rotacion2 = Quaternion.Euler(0.0f, -90.0f, 0.0f);
+                Quaternion rotacion2 = Quaternion.Euler(0.0f, 90.0f, 0.0f);
                 rb.MoveRotation(rotacion2);
                 anim.SetBool("andar", false);
                 anim.SetBool("parar", true);

@@ -35,13 +35,11 @@ public class CharacterControl : MonoBehaviour
     
     private void OnEnable()
     {
-        _onlyCamControl.Enable();
     }
 
     private void OnDisable()
     {
-        _onlyCamControl.Disable();
-        _playersControl.Disable();
+      
     }
 
     private void Awake()
