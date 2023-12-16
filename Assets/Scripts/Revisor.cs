@@ -125,7 +125,7 @@ public class Revisor : MonoBehaviour
 
     void desplazamientoHaciaEvan()
     {
-        Vector3 miVector = new Vector3(-1f, 0f, 0f);
+        Vector3 miVector = new Vector3(-2f, 0f, 0f);
         Vector3 direccion = (evan.position + miVector) - transform.position;
         direccion.Normalize();
         Vector3 direccionMedio = medio - transform.localPosition;
