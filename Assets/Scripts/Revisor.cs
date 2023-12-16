@@ -184,11 +184,11 @@ public class Revisor : MonoBehaviour
         else
         {
             rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
-            Quaternion rotacionDeseada = Quaternion.Euler(0.0f, -90.0f, 0.0f);
+            Quaternion rotacionDeseada = Quaternion.Euler(0.0f, -180.0f, 0.0f);
             rb.MoveRotation(rotacionDeseada);
             if (Vector3.Distance(transform.position, posInit) < 0.5f)
             {
-                Quaternion rotacion2 = Quaternion.Euler(0.0f, 90.0f, 0.0f);
+                Quaternion rotacion2 = Quaternion.Euler(0.0f, 0f, 0.0f);
                 rb.MoveRotation(rotacion2);
                 anim.SetBool("andar", false);
                 anim.SetBool("parar", true);

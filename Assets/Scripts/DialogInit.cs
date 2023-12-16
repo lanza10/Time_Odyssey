@@ -25,6 +25,7 @@ public class DialogInit : MonoBehaviour
     public GameObject imagenInteract;
     private bool isPlayerInRange;
     public MaquinaCafe maquina;
+  
 
     //Indices para las conversaciones
     private const int CONVERSACIONALEX = 0;
@@ -39,6 +40,9 @@ public class DialogInit : MonoBehaviour
     //Kit
     private GameObject sedante;
 
+    //Animaciones
+    public Animator animMaqui;
+    public Animator animRevi;
     private void OnEnable()
     {
         _playersControl.Enable();
@@ -158,18 +162,24 @@ public class DialogInit : MonoBehaviour
             {
                 control.addObjeto(llave);
             }
+            if (ConversationManager.Instance.GetBool("Agrede"))
+            {
+                animRevi.SetBool("alterar", true);
+            }
+            animRevi.SetBool("hablar", false);
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
         else if(actualConversation == MyConversations[CONVERSACIONCAFE])
         {
+            animMaqui.SetBool("hablar", false);
             control.removeObjeto(maquina.getCafe());
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
         }
         else if (actualConversation == MyConversations[CONVERSACIONFINAL])
         {
-            Debug.Log("AAAAAAAA");
+            animMaqui.SetBool("hablar", false);
             control.removeObjeto(maquina.getCafe());
             control.DesactivarMapSoloCamara();
             control.ActivarMap();
@@ -182,6 +192,12 @@ public class DialogInit : MonoBehaviour
                 SceneManager.LoadScene("GameOver");
             }
         }
+        else if (actualConversation == MyConversations[CONVERSACIONMAQUINISTA])
+        {
+            animMaqui.SetBool("hablar", false);
+            control.DesactivarMapSoloCamara();
+            control.ActivarMap();
+        }  
         else if (actualConversation == MyConversations[CONVERSACIONKIT])
         {
             Debug.Log(ConversationManager.Instance.GetBool("CogeSedante"));
@@ -210,6 +226,17 @@ public class DialogInit : MonoBehaviour
                 control.removeObjeto(llave);
                 imagenInteract.SetActive(false);
             } 
+            else if(actualConversation==MyConversations[CONVERSACIONFINAL] || actualConversation == MyConversations[CONVERSACIONMAQUINISTA] || actualConversation == MyConversations[CONVERSACIONCAFE])
+            {
+                animMaqui.SetBool("hablar", true);
+                ConversationManager.Instance.StartConversation(actualConversation);
+            }
+            else if (actualConversation == MyConversations[CONVERSACIONREVISOR2])
+            {
+                animRevi.SetBool("hablar", true);
+                animRevi.SetBool("parar", false);
+                ConversationManager.Instance.StartConversation(actualConversation);
+            }
             else
             {
                 ConversationManager.Instance.StartConversation(actualConversation);

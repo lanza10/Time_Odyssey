@@ -1634,6 +1634,83 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0009999998, y: 0.001, z: 0.0010000009}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &168712263
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1064889925}
+    m_Modifications:
+    - target: {fileID: 4436643438828443355, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_Name
+      value: ConversacionNoSedante
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.898436
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -67.618866
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99896586
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.045467395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+--- !u!114 &168712264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4764322892869486421, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+  m_PrefabInstance: {fileID: 168712263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &168712265 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6156965567429307787, guid: 7643f1ece76cbe245a28213727c36af6, type: 3}
+  m_PrefabInstance: {fileID: 168712263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &170938439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1932,6 +2009,78 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0010000002, y: 0.0009999999, z: 0.0010000004}
   m_Center: {x: -2.910383e-11, y: 4.656613e-10, z: 1.260385e-18}
+--- !u!1001 &216358946
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2857265264219387594, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_Name
+      value: ConversacionKit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354393064033266448, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+--- !u!114 &216358947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6969591645505477166, guid: 32bfe7f48960e6a47bf75492b711a6b6, type: 3}
+  m_PrefabInstance: {fileID: 216358946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &220379516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,15 +3811,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e9cbfefe9d4b1c64d81e3eafb2a7e545, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2126255
+      value: 0.096
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e9cbfefe9d4b1c64d81e3eafb2a7e545, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4790001
+      value: -0.333
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e9cbfefe9d4b1c64d81e3eafb2a7e545, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0204773
+      value: 0.541
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e9cbfefe9d4b1c64d81e3eafb2a7e545, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4134,20 +4283,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 13
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":96.59996,\"yPos\":187.799988},\"ID\":6,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"RobaLlave\",\"Value\":true}],\"TMPFontGUID\":null,\"Text\":\"Robar
-    la llave sin que el revisor se d\xE9 cuenta\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":224.599976,\"yPos\":258.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Intentar
-    convencer al revisor de que le d\xE9 la llave\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":139.59996,\"yPos\":412.8},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Agredir
-    al revisor\",\"parentUIDs\":[5],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"RobaLlave\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-107.200027,\"yPos\":-63},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Disculpe,
-    tengo una pregunta. \xBFHay alguna forma de detener este tren?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-136.400024,\"yPos\":55.8000031},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lamento
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":672.8,\"yPos\":272.8},\"ID\":6,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"RobaLlave\",\"Value\":true}],\"TMPFontGUID\":null,\"Text\":\"Robar
+    la llave sin que el revisor se d\xE9 cuenta\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":800.8,\"yPos\":343.8},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Intentar
+    convencer al revisor de que le d\xE9 la llave\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":715.8,\"yPos\":497.8},\"ID\":8,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"Agrede\",\"Value\":true}],\"TMPFontGUID\":null,\"Text\":\"Agredir
+    al revisor\",\"parentUIDs\":[5],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"RobaLlave\",\"BoolValue\":false},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"Agrede\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":469,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Disculpe,
+    tengo una pregunta. \xBFHay alguna forma de detener este tren?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":439.8,\"yPos\":140.8},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lamento
     decirte que s\xF3lo el maquinista tiene el control para detener el tren. No puedo
-    hacerlo yo ni ning\xFAn pasajero.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-118.40004,\"yPos\":169.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
+    hacerlo yo ni ning\xFAn pasajero.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":457.8,\"yPos\":254.8},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
     necesito llegar al vag\xF3n del maquinista. Algo extra\xF1o est\xE1 pasando en
-    este tren, y tengo que averiguarlo.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-151.40004,\"yPos\":290.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+    este tren, y tengo que averiguarlo.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":424.8,\"yPos\":375.8},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     siento, pero mi deber es asegurarme de que los pasajeros tengan un viaje seguro
-    y c\xF3modo. No puedo ayudarte con eso.\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-102.40004,\"yPos\":416.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parece
-    que tiene la llave colgando de su cintur\xF3n...\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":251.599976,\"yPos\":76.8},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ya
-    te he dicho que no puedo darte la llave. No hay raz\xF3n para que la necesites\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":213.599976,\"yPos\":-30.1999969},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Por
-    favor...\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":456.599976,\"yPos\":-4.199997},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":291.599976,\"yPos\":314.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+    y c\xF3modo. No puedo ayudarte con eso.\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":473.8,\"yPos\":501.8},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parece
+    que tiene la llave colgando de su cintur\xF3n...\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":null,\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":827.8,\"yPos\":161.8},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ya
+    te he dicho que no puedo darte la llave. No hay raz\xF3n para que la necesites\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":789.8,\"yPos\":54.8000031},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Por
+    favor...\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1032.8,\"yPos\":80.8},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Revisor\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":867.8,\"yPos\":399.8},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     siento, no me dejas otra opci\xF3n.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Evan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.6}]}"
   saveVersion: 110
   DefaultName: 
@@ -6960,6 +7109,83 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.79561424, y: 0.08241385, z: 0.32560873}
   m_Center: {x: 0.3324803, y: 0.024059337, z: 0.34523875}
+--- !u!1001 &683012886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1064889925}
+    m_Modifications:
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.898436
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -67.618866
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99896586
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.045467395
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204621593167596086, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+      propertyPath: m_Name
+      value: ConversacionMaquinista
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+--- !u!114 &683012887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 227034698748211831, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+  m_PrefabInstance: {fileID: 683012886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &683012888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2708908432440417121, guid: 62109588c95060c419ba676aac5d5bee, type: 3}
+  m_PrefabInstance: {fileID: 683012886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &698937320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8256,6 +8482,95 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0010000002, y: 0.0009999999, z: 0.0009999999}
   m_Center: {x: 0.000000059604645, y: 0, z: 1.1641532e-10}
+--- !u!1001 &942347002
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 543450652433455725}
+    m_Modifications:
+    - target: {fileID: 1982982685959037973, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_Name
+      value: AvisoPuerta
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14126153
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.057890475
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.28571427
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.463646
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.393274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.067041
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+--- !u!114 &942347003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8166608668519563772, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+  m_PrefabInstance: {fileID: 942347002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &942347004 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8812847044275869332, guid: ad9e8b8bbe3937f4d8a46d49d1e2124b, type: 3}
+  m_PrefabInstance: {fileID: 942347002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &943621116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9393,11 +9708,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064889921}
   m_LocalRotation: {x: -0, y: 0.045467395, z: -0, w: 0.99896586}
-  m_LocalPosition: {x: 9.029, y: 5.725, z: 67.076}
+  m_LocalPosition: {x: 9.099, y: 5.725, z: 67.836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 981921158}
+  - {fileID: 683012888}
+  - {fileID: 1084208848}
+  - {fileID: 168712265}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 5.212, z: 0}
@@ -9426,7 +9744,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!65 &1077010865
 BoxCollider:
@@ -9528,6 +9846,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077376177}
   m_CullTransparentMesh: 1
+--- !u!1001 &1084208846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1064889925}
+    m_Modifications:
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.898436
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -67.618866
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99896586
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.045467395
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337637739742704540, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+      propertyPath: m_Name
+      value: ConversacionFinal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+--- !u!114 &1084208847 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7501986260872837367, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+  m_PrefabInstance: {fileID: 1084208846}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1084208848 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 165436896239390804, guid: 8102d4f1fbee81f449fa4b54f46712af, type: 3}
+  m_PrefabInstance: {fileID: 1084208846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1084558281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9984,7 +10379,15 @@ PrefabInstance:
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: maquina
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1691752124}
+    - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: animRevi
+      value: 
+      objectReference: {fileID: 1712997949}
+    - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: animMaqui
+      value: 
+      objectReference: {fileID: 981921157}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: imagenAviso
       value: 
@@ -10004,7 +10407,7 @@ PrefabInstance:
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 942347003}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[3]
       value: 
@@ -10012,19 +10415,19 @@ PrefabInstance:
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 683012887}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1084208847}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[6]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 216358947}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[7]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 168712264}
     - target: {fileID: 284939636438617888, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_Size.x
       value: 0.8574861
@@ -10097,6 +10500,18 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2899109207247371687, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.847216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899109207247371687, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_Center.x
+      value: -0.27756244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899109207247371687, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+      propertyPath: m_Center.z
+      value: 1.0390756e-15
+      objectReference: {fileID: 0}
     - target: {fileID: 5653152992196606564, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: m_Name
       value: EvanProvisional
@@ -10106,6 +10521,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+--- !u!114 &1150785103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2953191319923966337, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
+  m_PrefabInstance: {fileID: 1150785102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944572761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc27551fd7d7a4a42a1fa56fb3ced7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1158715260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17977,6 +18403,129 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00045674937, y: 0.002053102, z: 0.0011294454}
   m_Center: {x: -0.00007001992, y: -0.000048245816, z: 0.00056472974}
+--- !u!1001 &1691752122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_Name
+      value: Modern Vending Machine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_TagString
+      value: MaquinaCafe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.316
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 140.541
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403209018745402, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1691752125}
+    - targetCorrespondingSourceObject: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1691752124}
+  m_SourcePrefab: {fileID: 100100000, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+--- !u!1 &1691752123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1979480663149564, guid: 1e22ef20d47d54487a606eb5bc7011a8, type: 3}
+  m_PrefabInstance: {fileID: 1691752122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1691752124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691752123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62796d93c873e2438c404277dce5552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evan: {fileID: 1150785103}
+  imagenInteract: {fileID: 1002314969}
+--- !u!65 &1691752125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691752123}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5, y: 5, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1693912544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22655,6 +23204,7 @@ Transform:
   m_Children:
   - {fileID: 1003191542}
   - {fileID: 1472443993}
+  - {fileID: 942347004}
   m_Father: {fileID: 2020603404}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -22953,8 +23503,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 3, z: 1.5}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 3.2173908, y: 3.0000002, z: 1.5}
+  m_Center: {x: -0.1946742, y: 1, z: -4.6325227e-16}
 --- !u!1 &919132149165882908
 GameObject:
   m_ObjectHideFlags: 0
