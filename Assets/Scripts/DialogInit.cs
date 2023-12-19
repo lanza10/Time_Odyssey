@@ -7,6 +7,7 @@ using System;
 using Unity.VisualScripting;
 using System.Runtime.ConstrainedExecution;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 public class DialogInit : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class DialogInit : MonoBehaviour
     public GameObject imagenInteract;
     private bool isPlayerInRange;
     public MaquinaCafe maquina;
+    bool puertaRev = false;
+    public bool  PuertaRev{
+        get { return puertaRev; } }
   
 
     //Indices para las conversaciones
@@ -101,6 +105,15 @@ public class DialogInit : MonoBehaviour
     {
         if (context.ReadValue<float>() == 1)
         {
+            if (actualConversation == MyConversations[CONVERSACIONFINAL])
+            {
+                ConversationManager.Instance.PressSelectedOption();
+                if (ConversationManager.Instance.GetBool("DaSedante"))
+                {
+                    animMaqui.gameObject.transform.position = new Vector3(7.653449f, 5.392f, 68.83143f);
+                    animMaqui.SetBool("dormir", true);
+                }
+            }
             ConversationManager.Instance.PressSelectedOption();
         }
     }
@@ -222,7 +235,7 @@ public class DialogInit : MonoBehaviour
         {
             if (control.inventario.objetos.Contains(llave) && objeto.CompareTag("Puerta"))
             {
-                objeto.gameObject.SetActive(false);
+                puertaRev = true;
                 control.removeObjeto(llave);
                 imagenInteract.SetActive(false);
             } 
@@ -266,21 +279,23 @@ public class DialogInit : MonoBehaviour
         {
             if (conversacionRevEnd)
             {
-                if(control.inventario.objetos.Contains(llave))
+                if (!puertaRev)
                 {
-                    //Evan llega a la puerta con la llave
-                    isPlayerInRange = true;
-                    imagenInteract.SetActive(true);
-                    objeto = other.gameObject;
+                    if (control.inventario.objetos.Contains(llave))
+                    {
+                        //Evan llega a la puerta con la llave
+                        isPlayerInRange = true;
+                        imagenInteract.SetActive(true);
+                        objeto = other.gameObject;
+                    }
+                    else
+                    {
+                        //Evan llega a la puerta sin la llave
+                        actualConversation = MyConversations[CONVERSACIONPUERTA];
+                        isPlayerInRange = true;
+                        imagenAviso.SetActive(true);
+                    }
                 }
-                else
-                {
-                    //Evan llega a la puerta sin la llave
-                    actualConversation = MyConversations[CONVERSACIONPUERTA];
-                    isPlayerInRange = true;
-                    imagenAviso.SetActive(true);
-                }
-               ;
             }
         }
         else if (other.CompareTag("Maquinista"))
