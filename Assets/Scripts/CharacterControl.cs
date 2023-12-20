@@ -57,11 +57,11 @@ public class CharacterControl : MonoBehaviour
 
         _playersControl.Exploracion.Saltar.performed += Jump;
 
-        _playersControl.Exploracion.Camara.performed += ReadCameraInput;
-        _playersControl.Exploracion.Camara.canceled += ReadCameraInput;
+        //_playersControl.Exploracion.Camara.performed += ReadCameraInput;
+        //_playersControl.Exploracion.Camara.canceled += ReadCameraInput;
 
-        _onlyCamControl.Camara.Camara.performed += ReadCameraInput;
-        _onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
+        //_onlyCamControl.Camara.Camara.performed += ReadCameraInput;
+        //_onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
     }
 
     public void ReadInput(InputAction.CallbackContext context)
@@ -87,7 +87,7 @@ public class CharacterControl : MonoBehaviour
     {
         //CamDirection();
         //_direction =  CamRight + CamForward;
-        OrientarPersonajeHaciaCamara();
+        //OrientarPersonajeHaciaCamara();
         Move();
         CheckGround();
     }
@@ -97,7 +97,7 @@ public class CharacterControl : MonoBehaviour
 
         //float camRotationX = _mainCamera.transform.rotation.eulerAngles.x;
         //transform.rotation = Quaternion.Euler(camRotationX, 0f, 0f);
-        MoveCamera();
+        //MoveCamera();
     }
     public void addObjeto(GameObject o)
     {
