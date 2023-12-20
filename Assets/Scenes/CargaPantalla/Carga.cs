@@ -20,7 +20,6 @@ public class Carga : MonoBehaviour
     private void Update()
     {
         slider.value = Mathf.Clamp01(operation.progress/0.9f);
-         Debug.Log(operation.progress);
         if (operation.progress >= 0.9f)
         {
             texto.text = "PULSA X PARA CONTINUAR";

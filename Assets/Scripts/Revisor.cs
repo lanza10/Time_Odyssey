@@ -72,7 +72,6 @@ public class Revisor : MonoBehaviour
                 }
                 break;
             case ESTADOS.CAMINANDO:
-                        Debug.Log("AAAA");
                         
                         if (semaforo) {
                             if (!dialogo.getConversacionRevEnd())
@@ -137,7 +136,6 @@ public class Revisor : MonoBehaviour
         if (!estaEnMedio)
         {
             Debug.Log(direccionMedio);
-            Debug.Log("Posición actual: " + transform.position);
             rb.MovePosition(transform.position + direccionMedio * velocidad * Time.deltaTime);
            
             if (Vector3.Distance(transform.position, medio) < 0.1f)

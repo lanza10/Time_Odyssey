@@ -35,11 +35,12 @@ public class CharacterControl : MonoBehaviour
     
     private void OnEnable()
     {
+       _playersControl.Enable();
     }
 
     private void OnDisable()
     {
-      
+      _playersControl.Disable();
     }
 
     private void Awake()

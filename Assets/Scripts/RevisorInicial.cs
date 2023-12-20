@@ -8,13 +8,15 @@ public class RevisorInicial : MonoBehaviour
     enum ESTADOS { QUIETO, CAMINANDO, REVISANDO, ALTERADO }
     //Stack<ESTADOS> SSstate = new Stack<ESTADOS>();
     public Transform evan;
-    private float velocidad = 3f;
+    private float velocidad = 1f;
     private bool semaforo;
     private Vector3 posInit;
     private bool estaEnMedio = false;
     Rigidbody rb;
+    public GameObject revisorPersonaje;
+    Animator anim;
 
-    private Vector3 medio = new Vector3(19.95f, 4.944584f, 100.04f);
+    private Vector3 medio = new Vector3(8.14f, 6.21f, 116.802f);
     enum CONV { NOINICIADA, INICIADA, ACABADA }
     private CONV _conv;
     CONV conv
@@ -39,6 +41,8 @@ public class RevisorInicial : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Debug.Log("HOLAAAAAAAAAAAA");
         posInit = transform.position;
+        anim = revisorPersonaje.GetComponent<Animator>();
+
         //SSstate.Clear();
     }
 
@@ -66,7 +70,7 @@ public class RevisorInicial : MonoBehaviour
                 }
                 break;
             case ESTADOS.CAMINANDO:
-                Debug.Log("AAAA");
+
                 if (semaforo)
                 {
                     if (!dialogo.getConversacionRevEnd())
@@ -75,6 +79,9 @@ public class RevisorInicial : MonoBehaviour
                     }
                     else
                     {
+                        anim.SetBool("andar", true);
+                        anim.SetBool("parar", false);
+                        anim.SetBool("hablar", false);
                         desplazamientoHaciaInicio();
                     }
                 }
@@ -85,6 +92,8 @@ public class RevisorInicial : MonoBehaviour
                 //Debug.Log("Estoy Caminando");
                 break;
             case ESTADOS.REVISANDO:
+                anim.SetBool("andar", false);
+                anim.SetBool("hablar", true);
                 switch (conv)
                 {
                     case CONV.NOINICIADA:
@@ -98,6 +107,10 @@ public class RevisorInicial : MonoBehaviour
                         }
                         break;
                     case CONV.ACABADA:
+                        Quaternion rotacionDeseada = Quaternion.Euler(0.0f, -90.0f, 0.0f);
+                        rb.MoveRotation(rotacionDeseada);
+                        anim.SetBool("hablar", false);
+                        anim.SetBool("andar", true);
                         estado = ESTADOS.CAMINANDO;
                         break;
                 }
@@ -111,29 +124,37 @@ public class RevisorInicial : MonoBehaviour
 
     void desplazamientoHaciaEvan()
     {
-        Vector3 miVector = new Vector3(1f, 0f, 0f);
+        Vector3 miVector = new Vector3(-2f, 0f, 0f);
         Vector3 direccion = (evan.position + miVector) - transform.position;
         direccion.Normalize();
         Vector3 direccionMedio = medio - transform.localPosition;
         direccionMedio.Normalize();
+        anim.SetBool("andar", true);
+        anim.SetBool("parar", false);
+
 
         if (!estaEnMedio)
         {
             Debug.Log(direccionMedio);
-            Debug.Log("Posición actual: " + transform.position);
             rb.MovePosition(transform.position + direccionMedio * velocidad * Time.deltaTime);
 
             if (Vector3.Distance(transform.position, medio) < 0.1f)
             {
                 estaEnMedio = true;
+
             }
         }
         else
         {
-            rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, evan.position + miVector) < 0.5f)
+            rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
+            Quaternion rotacionDeseada = Quaternion.Euler(0.0f, 90.0f, 0.0f);
+            rb.MoveRotation(rotacionDeseada);
+
+            if (Vector3.Distance(transform.position, evan.position + miVector) < 0.1f)
             {
+                rotacionDeseada = Quaternion.Euler(0.0f, -45.0f, 0.0f);
+                rb.MoveRotation(rotacionDeseada);
 
                 semaforo = false;
                 estaEnMedio = false;
@@ -142,10 +163,12 @@ public class RevisorInicial : MonoBehaviour
     }
     void desplazamientoHaciaInicio()
     {
+
         Vector3 direccion = posInit - transform.position;
         direccion.Normalize();
         Vector3 direccionMedio = medio - transform.position;
         direccionMedio.Normalize();
+
 
         if (!estaEnMedio)
         {
@@ -159,9 +182,14 @@ public class RevisorInicial : MonoBehaviour
         else
         {
             rb.MovePosition(transform.position + direccion * velocidad * Time.deltaTime);
-
+            Quaternion rotacionDeseada = Quaternion.Euler(0.0f, -180.0f, 0.0f);
+            rb.MoveRotation(rotacionDeseada);
             if (Vector3.Distance(transform.position, posInit) < 0.5f)
             {
+                Quaternion rotacion2 = Quaternion.Euler(0.0f, 0f, 0.0f);
+                rb.MoveRotation(rotacion2);
+                anim.SetBool("andar", false);
+                anim.SetBool("parar", true);
                 estado = ESTADOS.QUIETO;
                 semaforo = false;
             }

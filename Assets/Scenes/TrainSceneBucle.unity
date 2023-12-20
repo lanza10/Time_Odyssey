@@ -1276,8 +1276,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8786192, y: 0.08241385, z: 0.9999409}
-  m_Center: {x: 0.35370162, y: 0.024059244, z: 0.008071378}
+  m_Size: {x: 1.8403778, y: 0.033243563, z: 0.99994075}
+  m_Center: {x: 0.3345819, y: 0.048644852, z: 0.008071397}
 --- !u!65 &94054292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7895,8 +7895,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8786192, y: 0.08241385, z: 0.9999409}
-  m_Center: {x: 0.35370162, y: 0.024059244, z: 0.008071378}
+  m_Size: {x: 1.8786182, y: 0.074928254, z: 0.99994075}
+  m_Center: {x: 0.35370147, y: 0.028784148, z: 0.0080713965}
 --- !u!65 &802062913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9710,8 +9710,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8786192, y: 0.08241385, z: 0.9999409}
-  m_Center: {x: 0.35370162, y: 0.024059244, z: 0.008071378}
+  m_Size: {x: 1.8786182, y: 0.0774754, z: 0.99994075}
+  m_Center: {x: 0.35370147, y: 0.026528472, z: 0.008071397}
 --- !u!1001 &1033471679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11304,8 +11304,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.79561424, y: 0.08241385, z: 0.32560873}
-  m_Center: {x: 0.3324803, y: 0.024059337, z: 0.34523875}
+  m_Size: {x: 0.8438881, y: 0.039529305, z: 0.32560873}
+  m_Center: {x: 0.30834338, y: 0.05236012, z: 0.3452427}
 --- !u!65 &1230342753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11961,8 +11961,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8786192, y: 0.08241385, z: 0.9999409}
-  m_Center: {x: 0.35370162, y: 0.024059244, z: 0.008071378}
+  m_Size: {x: 1.9099963, y: 0.03315188, z: 0.99994075}
+  m_Center: {x: 0.33801168, y: 0.04869038, z: 0.008071397}
 --- !u!65 &1308458378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12636,8 +12636,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.79561424, y: 0.08241385, z: 0.32560873}
-  m_Center: {x: 0.3324803, y: 0.024059337, z: 0.34523875}
+  m_Size: {x: 0.79561424, y: 0.048692614, z: 0.32560873}
+  m_Center: {x: 0.3324803, y: 0.040920097, z: 0.34523875}
 --- !u!108 &1382188696
 Light:
   m_ObjectHideFlags: 0
