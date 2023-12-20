@@ -10708,11 +10708,11 @@ PrefabInstance:
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: imagenAviso
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 701649867}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: imagenInteract
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 120797218}
     - target: {fileID: 75602895332679361, guid: 1a3373f2e0e24264bb387c7b77585d5d, type: 3}
       propertyPath: MyConversations.Array.data[0]
       value: 
