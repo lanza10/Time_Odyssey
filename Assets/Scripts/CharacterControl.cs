@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 
 [RequireComponent(typeof(CharacterController))]
@@ -56,6 +57,9 @@ public class CharacterControl : MonoBehaviour
         _playersControl.Exploracion.Esprintar.canceled += Sprint;
 
         _playersControl.Exploracion.Saltar.performed += Jump;
+
+        _playersControl.Exploracion.Salir.performed += Exit;
+        _playersControl.Exploracion.Salir.canceled += Exit;
 
         //_playersControl.Exploracion.Camara.performed += ReadCameraInput;
         //_playersControl.Exploracion.Camara.canceled += ReadCameraInput;
@@ -194,6 +198,14 @@ public class CharacterControl : MonoBehaviour
 
         // Orienta el personaje hacia la dirección de la cámara.
         transform.rotation = Quaternion.Euler(0, camRotation.eulerAngles.y, 0);
+    }
+
+    private void Exit(InputAction.CallbackContext context)
+    {
+        if (context.ReadValue<float>() == 1)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void DesactivarMap()
