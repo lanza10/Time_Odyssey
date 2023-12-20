@@ -89,6 +89,15 @@ public partial class @Map: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Salir"",
+                    ""type"": ""Button"",
+                    ""id"": ""35dd4419-96c8-44eb-9481-4fb5680a4a56"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -166,6 +175,17 @@ public partial class @Map: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Conversar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb1f0c2f-6f04-4149-bc7e-442b2eb47abd"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Salir"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -271,6 +291,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         m_Exploracion_Agacharse = m_Exploracion.FindAction("Agacharse", throwIfNotFound: true);
         m_Exploracion_Conversar = m_Exploracion.FindAction("Conversar", throwIfNotFound: true);
         m_Exploracion_Coger = m_Exploracion.FindAction("Coger", throwIfNotFound: true);
+        m_Exploracion_Salir = m_Exploracion.FindAction("Salir", throwIfNotFound: true);
         // Conversacion
         m_Conversacion = asset.FindActionMap("Conversacion", throwIfNotFound: true);
         m_Conversacion_Siguiente = m_Conversacion.FindAction("Siguiente", throwIfNotFound: true);
@@ -345,6 +366,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
     private readonly InputAction m_Exploracion_Agacharse;
     private readonly InputAction m_Exploracion_Conversar;
     private readonly InputAction m_Exploracion_Coger;
+    private readonly InputAction m_Exploracion_Salir;
     public struct ExploracionActions
     {
         private @Map m_Wrapper;
@@ -356,6 +378,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         public InputAction @Agacharse => m_Wrapper.m_Exploracion_Agacharse;
         public InputAction @Conversar => m_Wrapper.m_Exploracion_Conversar;
         public InputAction @Coger => m_Wrapper.m_Exploracion_Coger;
+        public InputAction @Salir => m_Wrapper.m_Exploracion_Salir;
         public InputActionMap Get() { return m_Wrapper.m_Exploracion; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -386,6 +409,9 @@ public partial class @Map: IInputActionCollection2, IDisposable
             @Coger.started += instance.OnCoger;
             @Coger.performed += instance.OnCoger;
             @Coger.canceled += instance.OnCoger;
+            @Salir.started += instance.OnSalir;
+            @Salir.performed += instance.OnSalir;
+            @Salir.canceled += instance.OnSalir;
         }
 
         private void UnregisterCallbacks(IExploracionActions instance)
@@ -411,6 +437,9 @@ public partial class @Map: IInputActionCollection2, IDisposable
             @Coger.started -= instance.OnCoger;
             @Coger.performed -= instance.OnCoger;
             @Coger.canceled -= instance.OnCoger;
+            @Salir.started -= instance.OnSalir;
+            @Salir.performed -= instance.OnSalir;
+            @Salir.canceled -= instance.OnSalir;
         }
 
         public void RemoveCallbacks(IExploracionActions instance)
@@ -507,6 +536,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         void OnAgacharse(InputAction.CallbackContext context);
         void OnConversar(InputAction.CallbackContext context);
         void OnCoger(InputAction.CallbackContext context);
+        void OnSalir(InputAction.CallbackContext context);
     }
     public interface IConversacionActions
     {
