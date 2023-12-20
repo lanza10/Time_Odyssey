@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
     }
     public void cargarEscenaJuego() {
 
-        SceneManager.LoadScene("TrainScene");
+        SceneManager.LoadScene("PantallaCarga");
     }
     public void cargarCreditos()
     {

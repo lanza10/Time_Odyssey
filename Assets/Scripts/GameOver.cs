@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
 
     public void cargarEscenaJuego()
     {
-        SceneManager.LoadScene("TrainScene");
+        SceneManager.LoadScene("PantallaCarga");
     }
     public void backToMenu()
     {
