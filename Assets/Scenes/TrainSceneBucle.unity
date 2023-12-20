@@ -19278,7 +19278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   evan: {fileID: 1150785103}
-  imagenInteract: {fileID: 0}
+  imagenInteract: {fileID: 120797218}
 --- !u!65 &1691752125
 BoxCollider:
   m_ObjectHideFlags: 0
