@@ -59,11 +59,11 @@ public class CharacterControlMando : MonoBehaviour
         _playersControl.Exploracion.Salir.performed += Exit;
         _playersControl.Exploracion.Salir.canceled += Exit;
 
-        //_playersControl.Exploracion.Camara.performed += ReadCameraInput;
-        //_playersControl.Exploracion.Camara.canceled += ReadCameraInput;
+        _playersControl.Exploracion.Camara.performed += ReadCameraInput;
+        _playersControl.Exploracion.Camara.canceled += ReadCameraInput;
 
-        //_onlyCamControl.Camara.Camara.performed += ReadCameraInput;
-        //_onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
+        _onlyCamControl.Camara.Camara.performed += ReadCameraInput;
+        _onlyCamControl.Camara.Camara.canceled += ReadCameraInput;
     }
 
     public void ReadInput(InputAction.CallbackContext context)
