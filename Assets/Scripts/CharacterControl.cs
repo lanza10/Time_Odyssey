@@ -8,6 +8,7 @@ using UnityEngine.Windows;
 [RequireComponent(typeof(CharacterController))]
 public class CharacterControl : MonoBehaviour
 {
+    public GameObject interfazInventario;
     private Map _playersControl = null;
     private MapSoloCamara _onlyCamControl = null;
     public Inventario inventario;
@@ -60,6 +61,9 @@ public class CharacterControl : MonoBehaviour
 
         _playersControl.Exploracion.Salir.performed += Exit;
         _playersControl.Exploracion.Salir.canceled += Exit;
+
+        _playersControl.Exploracion.AbrirInv.performed += AbrirInventario;
+        _playersControl.Exploracion.AbrirInv.canceled += AbrirInventario;
 
         //_playersControl.Exploracion.Camara.performed += ReadCameraInput;
         //_playersControl.Exploracion.Camara.canceled += ReadCameraInput;
@@ -205,6 +209,21 @@ public class CharacterControl : MonoBehaviour
         if (context.ReadValue<float>() == 1)
         {
             SceneManager.LoadScene("MainMenu");
+        }
+    }
+
+    public void AbrirInventario(InputAction.CallbackContext context)
+    {
+        if (context.ReadValue<float>() == 1)
+        {
+            if (interfazInventario.activeSelf)
+            {
+                interfazInventario.SetActive(false);
+            }
+            else
+            {
+                interfazInventario.SetActive(true);
+            }
         }
     }
 

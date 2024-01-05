@@ -82,7 +82,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Coger"",
+                    ""name"": ""AbrirInv"",
                     ""type"": ""Button"",
                     ""id"": ""dd919cce-5b78-440e-9865-351478fa25d4"",
                     ""expectedControlType"": ""Button"",
@@ -163,7 +163,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Coger"",
+                    ""action"": ""AbrirInv"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -290,7 +290,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         m_Exploracion_Esprintar = m_Exploracion.FindAction("Esprintar", throwIfNotFound: true);
         m_Exploracion_Agacharse = m_Exploracion.FindAction("Agacharse", throwIfNotFound: true);
         m_Exploracion_Conversar = m_Exploracion.FindAction("Conversar", throwIfNotFound: true);
-        m_Exploracion_Coger = m_Exploracion.FindAction("Coger", throwIfNotFound: true);
+        m_Exploracion_AbrirInv = m_Exploracion.FindAction("AbrirInv", throwIfNotFound: true);
         m_Exploracion_Salir = m_Exploracion.FindAction("Salir", throwIfNotFound: true);
         // Conversacion
         m_Conversacion = asset.FindActionMap("Conversacion", throwIfNotFound: true);
@@ -365,7 +365,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
     private readonly InputAction m_Exploracion_Esprintar;
     private readonly InputAction m_Exploracion_Agacharse;
     private readonly InputAction m_Exploracion_Conversar;
-    private readonly InputAction m_Exploracion_Coger;
+    private readonly InputAction m_Exploracion_AbrirInv;
     private readonly InputAction m_Exploracion_Salir;
     public struct ExploracionActions
     {
@@ -377,7 +377,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         public InputAction @Esprintar => m_Wrapper.m_Exploracion_Esprintar;
         public InputAction @Agacharse => m_Wrapper.m_Exploracion_Agacharse;
         public InputAction @Conversar => m_Wrapper.m_Exploracion_Conversar;
-        public InputAction @Coger => m_Wrapper.m_Exploracion_Coger;
+        public InputAction @AbrirInv => m_Wrapper.m_Exploracion_AbrirInv;
         public InputAction @Salir => m_Wrapper.m_Exploracion_Salir;
         public InputActionMap Get() { return m_Wrapper.m_Exploracion; }
         public void Enable() { Get().Enable(); }
@@ -406,9 +406,9 @@ public partial class @Map: IInputActionCollection2, IDisposable
             @Conversar.started += instance.OnConversar;
             @Conversar.performed += instance.OnConversar;
             @Conversar.canceled += instance.OnConversar;
-            @Coger.started += instance.OnCoger;
-            @Coger.performed += instance.OnCoger;
-            @Coger.canceled += instance.OnCoger;
+            @AbrirInv.started += instance.OnAbrirInv;
+            @AbrirInv.performed += instance.OnAbrirInv;
+            @AbrirInv.canceled += instance.OnAbrirInv;
             @Salir.started += instance.OnSalir;
             @Salir.performed += instance.OnSalir;
             @Salir.canceled += instance.OnSalir;
@@ -434,9 +434,9 @@ public partial class @Map: IInputActionCollection2, IDisposable
             @Conversar.started -= instance.OnConversar;
             @Conversar.performed -= instance.OnConversar;
             @Conversar.canceled -= instance.OnConversar;
-            @Coger.started -= instance.OnCoger;
-            @Coger.performed -= instance.OnCoger;
-            @Coger.canceled -= instance.OnCoger;
+            @AbrirInv.started -= instance.OnAbrirInv;
+            @AbrirInv.performed -= instance.OnAbrirInv;
+            @AbrirInv.canceled -= instance.OnAbrirInv;
             @Salir.started -= instance.OnSalir;
             @Salir.performed -= instance.OnSalir;
             @Salir.canceled -= instance.OnSalir;
@@ -535,7 +535,7 @@ public partial class @Map: IInputActionCollection2, IDisposable
         void OnEsprintar(InputAction.CallbackContext context);
         void OnAgacharse(InputAction.CallbackContext context);
         void OnConversar(InputAction.CallbackContext context);
-        void OnCoger(InputAction.CallbackContext context);
+        void OnAbrirInv(InputAction.CallbackContext context);
         void OnSalir(InputAction.CallbackContext context);
     }
     public interface IConversacionActions

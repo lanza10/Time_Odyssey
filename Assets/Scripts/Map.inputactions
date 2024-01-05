@@ -60,7 +60,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Coger",
+                    "name": "AbrirInv",
                     "type": "Button",
                     "id": "dd919cce-5b78-440e-9865-351478fa25d4",
                     "expectedControlType": "Button",
@@ -141,7 +141,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Coger",
+                    "action": "AbrirInv",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
