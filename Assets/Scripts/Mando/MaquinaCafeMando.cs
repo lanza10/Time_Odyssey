@@ -39,7 +39,7 @@ public class MaquinaCafeMando : MonoBehaviour
             imagenInteract.SetActive(false);
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("EvanProvisional"))
         {

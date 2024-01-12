@@ -258,15 +258,9 @@ public class DialogInit : MonoBehaviour
            
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Alex"))
-        {
-            if(conversacionAlexEnd) { 
-                //Conversacion posterior con alex (no hay por ahora)
-            }
-        }
-        else if (other.CompareTag("Revisor") && !control.inventario.objetos.Contains(llave))
+        if (other.CompareTag("Revisor") && !control.inventario.objetos.Contains(llave))
         {
             if (conversacionRevEnd)
             {
@@ -301,24 +295,18 @@ public class DialogInit : MonoBehaviour
         }
         else if (other.CompareTag("Maquinista"))
         {
+            isPlayerInRange = true;
+            imagenAviso.SetActive(true);
+
             if (!control.inventario.objetos.Contains(maquina.getCafe()))
             {
-                //Evan llega por primera vez al maquinista (no tiene el café)
                 actualConversation = MyConversations[CONVERSACIONMAQUINISTA];
-                isPlayerInRange = true;
-                imagenAviso.SetActive(true);
             }
-            else if(control.inventario.objetos.Contains(maquina.getCafe()) && control.inventario.objetos.Contains(sedante))
+            else
             {
-                //Evan llega con el café y el sedante (Conversación Final)
-                actualConversation = MyConversations[CONVERSACIONFINAL];
-                isPlayerInRange = true;
-                imagenAviso.SetActive(true);
-            }else if (control.inventario.objetos.Contains(maquina.getCafe()) && !control.inventario.objetos.Contains(sedante))
-            {
-                actualConversation = MyConversations[CONVERSACIONCAFE];
-                isPlayerInRange = true;
-                imagenAviso.SetActive(true);
+                actualConversation = control.inventario.objetos.Contains(sedante)
+                    ? MyConversations[CONVERSACIONFINAL]
+                    : MyConversations[CONVERSACIONCAFE];
             }
         }
         else if (other.CompareTag("Kit"))
