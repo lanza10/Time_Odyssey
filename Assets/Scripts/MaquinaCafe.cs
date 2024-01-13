@@ -43,7 +43,7 @@ public class MaquinaCafe : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("EvanProvisional"))
+        if (other.CompareTag("EvanProvisional") && !evan.inventario.objetos.Contains(cafe))
         {
             isPlayerInRange = true;
             imagenInteract.SetActive(true);
