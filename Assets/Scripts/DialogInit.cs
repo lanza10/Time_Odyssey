@@ -12,8 +12,8 @@ using System.Runtime.InteropServices.WindowsRuntime;
 public class DialogInit : MonoBehaviour
 {
     // Start is called before the first frame update
-    public CharacterControlMando control;
-    //public CharacterControl control;
+    //public CharacterControlMando control;
+    public CharacterControl control;
     private Map _playersControl = null;
     public NPCConversation[] MyConversations;
     public NPCConversation actualConversation;
